@@ -1,0 +1,41 @@
+Byte-Interval Mediation
+Copyright (c) 2026 Joshua Pinckard
+
+This repository is a standalone extraction of the byte authority from the
+ToolsEnabled engine (https://toolsenabled.ai), created by Joshua Pinckard.
+docs/EXTRACTION.md lists every file and every change from the engine original.
+
+-------------------------------------------------------------------------------
+LICENSE
+-------------------------------------------------------------------------------
+
+This software is licensed under the MIT License. The grant is made by the
+LICENSE file in the root of this repository. That file controls; nothing in this
+NOTICE alters, adds to, or narrows it.
+
+-------------------------------------------------------------------------------
+TRADEMARKS
+-------------------------------------------------------------------------------
+
+"ToolsEnabled" is a trademark of Joshua Pinckard. The MIT License grants
+copyright permissions only; it does not grant permission to use the name in a
+way that suggests a derivative is published or endorsed by ToolsEnabled.
+Describing provenance ("extracted from ToolsEnabled") is fine.
+
+-------------------------------------------------------------------------------
+ACADEMIC AND RESEARCH CITATION
+-------------------------------------------------------------------------------
+
+Joshua Pinckard conceived the project, defined its objectives and requirements,
+directed the autonomous agent workflows, selected and evaluated outputs, and
+assumes responsibility for the research methodology and conclusions. AI agents
+generated substantial portions of the implementation and written drafts.
+
+Cite this repository with CITATION.cff.
+
+-------------------------------------------------------------------------------
+THIRD-PARTY COMPONENTS
+-------------------------------------------------------------------------------
+
+None are bundled. The code uses only Node.js built-in modules, including
+node:sqlite, which embeds SQLite. SQLite is in the public domain.

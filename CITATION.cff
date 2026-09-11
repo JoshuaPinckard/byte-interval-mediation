@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software or its data, please cite it as below."
+type: software
+title: "Byte-Interval Mediation: Read-Receipt Write Admission for Concurrent LLM Coding Agents"
+abstract: >-
+  A byte authority that records durable read receipts over exact byte
+  intervals and admits a file write only when the bytes it replaces, and
+  everything its author read, are still current. Standalone extraction of the
+  ToolsEnabled engine component, with its test suites, design probes and
+  recorded results.
+authors:
+  - family-names: Pinckard
+    given-names: Joshua
+    email: josh@toolsenabled.ai
+    affiliation: ToolsEnabled
+    website: "https://toolsenabled.ai"
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/JoshuaPinckard/byte-interval-mediation"
+url: "https://toolsenabled.ai"
+keywords:
+  - concurrency control
+  - lost update
+  - multi-agent systems
+  - LLM coding agents
+  - crash recovery
+  - file coordination
+references:
+  - type: software
+    title: "Blast-Radius"
+    authors:
+      - family-names: Pinckard
+        given-names: Joshua
+    repository-code: "https://github.com/JoshuaPinckard/co-read"
