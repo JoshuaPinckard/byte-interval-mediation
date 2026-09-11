@@ -11,6 +11,7 @@
   },
   "scripts": {
     "test": "node --test --test-concurrency=1 tests/*.test.js",
-    "probes": "node --test probes/*.test.js"
+    "probes": "node --test probes/*.test.js",
+    "review:boundaries": "node --test review/admission-boundaries.test.js"
   }
 }

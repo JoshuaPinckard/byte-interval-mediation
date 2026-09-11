@@ -48,9 +48,9 @@ On commit, observations are rebased (`_rebaseReads`). With `[s,e)` replaced by `
 These hold when every writer of the covered files goes through the authority, the adapters are correct and processes fail by stopping.
 
 1. **No lost update between mediated patches.** A patch publishes only if the bytes it replaces equal what its scope observed. A concurrent committed change to those bytes makes that observation stale, so the patch refuses.
-2. **Cross-file read validity.** Any mediated write, patch or whole-file, publishes only if every observation of the writing scope is current, on every file it read.
+2. **Cross-file byte validity.** Admission checks every observation of the writing scope. When every writer of every observed resource uses this same authority, its lock preserves those validated byte contents through publication. Lease expiry is checked at admission, not rechecked as a publication deadline. An unmediated dependency change after validation is not fenced.
 3. **Exact receipts.** A receipt describes exactly the bytes released, and is durable before release. A failed validation creates no receipt.
-4. **Disjoint work survives.** Byte-disjoint mediated edits both land, including when an earlier edit changed length and shifted the later one's coordinates.
+4. **Disjoint observations can survive.** Coordinate rebasing preserves byte-disjoint observations after a length-changing patch. A later edit can land if its complete read set, lease, receipt coverage and other admission checks still pass; byte-disjoint write spans alone do not guarantee admission.
 5. **Observed drift invalidates.** An unmediated change visible at the next materialization invalidates every observation of the file and requires a whole-file reread.
 6. **Blind writes are explicit.** A whole-file write is recorded as `blind-whole-file` intent, creates no receipt and invalidates every observation of the file.
 7. **Creation never replaces.** A creation publishes by hard link from an exclusive, fsynced, journaled stage, and fails rather than replace a file that appeared meanwhile.
@@ -71,6 +71,10 @@ Each of these is by design or known; probes P1 to P7 in `probes/` demonstrate th
 - **Throughput.** One transaction serializes every operation across processes. Many-agent throughput has not been measured.
 - **Durability scope.** This is process-crash recovery. It is not a guarantee against power loss or filesystem corruption beyond what fsync and SQLite provide.
 - **Reading is not understanding.** A reread satisfies the mechanical check. It does not show that an agent reasoned about the change.
+
+## Admission-boundary review
+
+`review/admission-boundaries.test.js` demonstrates two limits without changing the authority: a lease may expire between validation and publication, and an unmediated writer may change a different observed file in that interval. Both target patches commit in these constructed cases. Do not restate admission-time checks as continuous monitoring or a final expiry check.
 
 ## Threat model
 

@@ -1,0 +1,26 @@
+TAP version 13
+# {"observationExpiresAt":3601000,"clockAtCommit":3601001,"outcome":"committed","scopeChecks":5}
+# {"unmediatedDependencyChangedAfterValidation":true,"outcome":"committed"}
+# (node:1556562) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: paper review: leases are checked at admission, not as publication deadlines
+ok 1 - paper review: leases are checked at admission, not as publication deadlines
+  ---
+  duration_ms: 92.092878
+  type: 'test'
+  ...
+# Subtest: paper review: unmediated cross-file changes after validation are not fenced
+ok 2 - paper review: unmediated cross-file changes after validation are not fenced
+  ---
+  duration_ms: 101.410594
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 237.715767

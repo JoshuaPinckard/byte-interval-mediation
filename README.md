@@ -1,6 +1,6 @@
 # Byte-Interval Mediation
 
-Read-receipt write admission for concurrent coding agents. When several agents edit the same files, a write should publish only if the bytes it replaces are the bytes its author read. This repository is the byte authority from the ToolsEnabled engine, extracted to run on plain Node, with its test suites, the design probes and the recorded results.
+Read-receipt write admission for concurrent coding agents. When several agents edit the same files, a mediated patch is admitted only after its author has observed the span it changes and its read set passes freshness checks. This repository is the byte authority from the ToolsEnabled engine, extracted to run on plain Node, with its test suites, the design probes and the recorded results.
 
 Principal investigator: Josh Pinckard.
 
@@ -12,7 +12,7 @@ Principal investigator: Josh Pinckard.
 - Treats a whole-file write as explicit blind replacement, never as a read.
 - Creates files exclusively (fsynced stage, hard-link publication) and journals every publication as PREPARED, then COMMITTED, so a crash resolves from the bytes on disk.
 
-`docs/DESIGN.md` states the guarantees, the non-guarantees and the threat model.
+`docs/DESIGN.md` states the guarantees, the non-guarantees and the threat model. Freshness and expiry are admission checks, not continuous monitoring or publication deadlines. Cross-file byte freshness through publication assumes all writers of the observed resources use the same authority.
 
 ## Status
 
@@ -20,7 +20,9 @@ Implemented and green in its own tests. Here, standalone: 68 of 68 tests and 6 o
 
 It does not solve semantic conflicts. Two byte-disjoint edits can still break an invariant that spans both regions; probe P4 shows it.
 
-In the ToolsEnabled 1.0.44 runtime it was effectively dormant. The mediated `repo.*` tools pointed at the installed payload, and agents edited through host file tools that were not mediated. Mediation of those host tools (`host.read_file`, `host.write_file` and a new `host.patch_file`) is now implemented on an engine branch and awaiting deployment. Its test logs and measurements are in `data/host-mediation-branch/`.
+In the inspected engine snapshot (`c34cab8c`), the agents' coding workflow bypassed it. This source/deployment observation is not an acceptance receipt for the final 1.0.44 cut. The mediated `repo.*` tools pointed at the installed payload, and agents edited through host file tools that were not mediated. Mediation of those host tools (`host.read_file`, `host.write_file` and a new `host.patch_file`) is now implemented on an engine branch and awaiting deployment. Its test logs and measurements are in `data/host-mediation-branch/`.
+
+The 2026-09-11 review independently reran the 68 core tests and six original probes, compared the extracted files against engine `c34cab8c`, and added two boundary checks. See `review/2026-09-11.md`; run `npm run review:boundaries` to reproduce those separate checks.
 
 ## Relation to Blast-Radius
 
