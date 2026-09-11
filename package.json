@@ -1,0 +1,16 @@
+{
+  "name": "byte-interval-mediation",
+  "version": "0.1.0",
+  "description": "Read-receipt write admission for concurrent file-editing agents. Standalone extraction of the ToolsEnabled byte authority.",
+  "license": "MIT",
+  "author": "Joshua Pinckard <josh@toolsenabled.ai> (https://toolsenabled.ai)",
+  "private": true,
+  "main": "src/lib/region-holds/byte-authority.js",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "test": "node --test --test-concurrency=1 tests/*.test.js",
+    "probes": "node --test probes/*.test.js"
+  }
+}
