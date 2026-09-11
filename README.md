@@ -24,7 +24,7 @@ In the ToolsEnabled 1.0.44 runtime it was effectively dormant. The mediated `rep
 
 ## Relation to Blast-Radius
 
-[Blast-Radius](https://github.com/JoshuaPinckard/co-read) designs an estimator for which regions a change may invalidate when nobody was recorded reading them. This repository is the exact tier beneath it: where a read was recorded, the answer is a lookup, not a prediction. `docs/HISTORY.md` traces both back to one redesign.
+Blast-Radius, a companion research project that is not yet public, designs an estimator for which regions a change may invalidate when nobody was recorded reading them. This repository is the exact tier beneath it: where a read was recorded, the answer is a lookup, not a prediction. `docs/HISTORY.md` traces both back to one redesign.
 
 ## Run it
 
