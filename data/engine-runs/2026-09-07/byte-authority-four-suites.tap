@@ -1,0 +1,366 @@
+TAP version 13
+# (node:43383) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: failed publication remains prepared and retry automatically records unapplied bytes before a new publication
+ok 1 - failed publication remains prepared and retry automatically records unapplied bytes before a new publication
+  ---
+  duration_ms: 213.478692
+  type: 'test'
+  ...
+# Subtest: publication followed by an outcome failure recovers byte identity and reader invalidation exactly once
+ok 2 - publication followed by an outcome failure recovers byte identity and reader invalidation exactly once
+  ---
+  duration_ms: 196.819862
+  type: 'test'
+  ...
+# Subtest: unexpected recovered bytes remain quarantined while an unrelated scope and resource still work
+ok 3 - unexpected recovered bytes remain quarantined while an unrelated scope and resource still work
+  ---
+  duration_ms: 318.858084
+  type: 'test'
+  ...
+# Subtest: a pending materialized edit to another read dependency is recovered before allowing a target patch
+ok 4 - a pending materialized edit to another read dependency is recovered before allowing a target patch
+  ---
+  duration_ms: 319.860001
+  type: 'test'
+  ...
+# Subtest: missing recorded state refuses before materializing a file
+ok 5 - missing recorded state refuses before materializing a file
+  ---
+  duration_ms: 105.030797
+  type: 'test'
+  ...
+# Subtest: pending operation corruption is refused before recovery can change read projections
+ok 6 - pending operation corruption is refused before recovery can change read projections
+  ---
+  duration_ms: 129.752799
+  type: 'test'
+  ...
+# Subtest: loss of a resource version is corruption, not permission to manufacture a new empty index
+ok 7 - loss of a resource version is corruption, not permission to manufacture a new empty index
+  ---
+  duration_ms: 137.945767
+  type: 'test'
+  ...
+# Subtest: interrupted no-op recovery records an observation with no invented publication effect
+ok 8 - interrupted no-op recovery records an observation with no invented publication effect
+  ---
+  duration_ms: 168.400184
+  type: 'test'
+  ...
+# (node:43384) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: create journal is durable before the real no-replace publisher runs
+ok 9 - create journal is durable before the real no-replace publisher runs
+  ---
+  duration_ms: 144.00075
+  type: 'test'
+  ...
+# Subtest: revocation after stage preparation but before its journal leaves no target or invented cleanup ownership
+ok 10 - revocation after stage preparation but before its journal leaves no target or invented cleanup ownership
+  ---
+  duration_ms: 90.426687
+  type: 'test'
+  ...
+# Subtest: failure before create publication recovers absence and retires only its exact owned stage
+ok 11 - failure before create publication recovers absence and retires only its exact owned stage
+  ---
+  duration_ms: 183.670652
+  type: 'test'
+  ...
+# Subtest: recovery after link before stage unlink proves exact identity for nonempty creation
+ok 12 - recovery after link before stage unlink proves exact identity for nonempty creation
+  ---
+  duration_ms: 170.812105
+  type: 'test'
+  ...
+# Subtest: recovery after link before stage unlink proves exact identity for empty creation
+ok 13 - recovery after link before stage unlink proves exact identity for empty creation
+  ---
+  duration_ms: 175.330345
+  type: 'test'
+  ...
+# Subtest: a failed confirmation after completed creation automatically recovers before the next real read
+ok 14 - a failed confirmation after completed creation automatically recovers before the next real read
+  ---
+  duration_ms: 149.545181
+  type: 'test'
+  ...
+# Subtest: no-replace creation preserves a racing target even when its bytes differ
+ok 15 - no-replace creation preserves a racing target even when its bytes differ
+  ---
+  duration_ms: 228.347847
+  type: 'test'
+  ...
+# Subtest: no-replace creation preserves a racing target even when its bytes match
+ok 16 - no-replace creation preserves a racing target even when its bytes match
+  ---
+  duration_ms: 214.355246
+  type: 'test'
+  ...
+# Subtest: an extra hard-link alias makes interrupted creation UNKNOWN without deleting any evidence
+ok 17 - an extra hard-link alias makes interrupted creation UNKNOWN without deleting any evidence
+  ---
+  duration_ms: 141.144841
+  type: 'test'
+  ...
+# Subtest: substituting an equal-content target after creation is not recovered as the prepared file identity
+ok 18 - substituting an equal-content target after creation is not recovered as the prepared file identity
+  ---
+  duration_ms: 121.251783
+  type: 'test'
+  ...
+# Subtest: equal-content replacement between publication reconciliation and confirmation cannot commit our creation
+ok 19 - equal-content replacement between publication reconciliation and confirmation cannot commit our creation
+  ---
+  duration_ms: 124.79312
+  type: 'test'
+  ...
+# Subtest: equal-content replacement after recovery reconciliation is detected by the final materialized identity
+ok 20 - equal-content replacement after recovery reconciliation is detected by the final materialized identity
+  ---
+  duration_ms: 125.571532
+  type: 'test'
+  ...
+# Subtest: a byte-only legacy materializer cannot confirm a new file without its exact staged identity
+ok 21 - a byte-only legacy materializer cannot confirm a new file without its exact staged identity
+  ---
+  duration_ms: 119.892587
+  type: 'test'
+  ...
+# Subtest: a checksummed but arbitrary persisted stage path is rejected before invoking recovery adapters
+ok 22 - a checksummed but arbitrary persisted stage path is rejected before invoking recovery adapters
+  ---
+  duration_ms: 122.4515
+  type: 'test'
+  ...
+# Subtest: whole-write recovery invalidates old read sets exactly once without manufacturing a read
+ok 23 - whole-write recovery invalidates old read sets exactly once without manufacturing a read
+  ---
+  duration_ms: 155.759719
+  type: 'test'
+  ...
+# Subtest: schema v1 migration preserves exact journal/receipt JSON and recovers the before image
+ok 24 - schema v1 migration preserves exact journal/receipt JSON and recovers the before image
+  ---
+  duration_ms: 256.442812
+  type: 'test'
+  ...
+# Subtest: schema v1 migration preserves exact journal/receipt JSON and recovers the after image
+ok 25 - schema v1 migration preserves exact journal/receipt JSON and recovers the after image
+  ---
+  duration_ms: 273.152519
+  type: 'test'
+  ...
+# Subtest: failed migration rolls back schema/version and preserves its v1 journal for a later recovery
+ok 26 - failed migration rolls back schema/version and preserves its v1 journal for a later recovery
+  ---
+  duration_ms: 164.885761
+  type: 'test'
+  ...
+# (node:43385) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: blind whole-file overwrite is exact publication intent, not a fabricated read receipt
+ok 27 - blind whole-file overwrite is exact publication intent, not a fabricated read receipt
+  ---
+  duration_ms: 147.03914
+  type: 'test'
+  ...
+# Subtest: write intent Buffer is copied before asynchronous authority admission
+ok 28 - write intent Buffer is copied before asynchronous authority admission
+  ---
+  duration_ms: 125.833082
+  type: 'test'
+  ...
+# Subtest: a changed cross-file dependency prevents blind overwrite
+ok 29 - a changed cross-file dependency prevents blind overwrite
+  ---
+  duration_ms: 310.948617
+  type: 'test'
+  ...
+# Subtest: a changed cross-file dependency prevents blind creation
+ok 30 - a changed cross-file dependency prevents blind creation
+  ---
+  duration_ms: 311.866204
+  type: 'test'
+  ...
+# Subtest: whole overwrite invalidates writer and peer observations without expanding what either read
+ok 31 - whole overwrite invalidates writer and peer observations without expanding what either read
+  ---
+  duration_ms: 279.657471
+  type: 'test'
+  ...
+# Subtest: empty-file creation has an absent base and a real effect; empty overwrite is a no-op
+ok 32 - empty-file creation has an absent base and a real effect; empty overwrite is a no-op
+  ---
+  duration_ms: 169.914592
+  type: 'test'
+  ...
+# Subtest: new filename case is preserved separately from the canonical Windows index key
+ok 33 - new filename case is preserved separately from the canonical Windows index key
+  ---
+  duration_ms: 144.491184
+  type: 'test'
+  ...
+# Subtest: a valid long target basename does not make the operation-owned create stage exceed the leaf-name limit
+ok 34 - a valid long target basename does not make the operation-owned create stage exceed the leaf-name limit
+  ---
+  duration_ms: 117.141508
+  type: 'test'
+  ...
+# Subtest: an unavailable previously read dependency cannot be repaired by inventing an absence receipt
+ok 35 - an unavailable previously read dependency cannot be repaired by inventing an absence receipt
+  ---
+  duration_ms: 209.434791
+  type: 'test'
+  ...
+# Subtest: an adapter error cannot be inferred as absent, and legacy adapters cannot silently create
+ok 36 - an adapter error cannot be inferred as absent, and legacy adapters cannot silently create
+  ---
+  duration_ms: 75.099587
+  type: 'test'
+  ...
+# Subtest: synchronous last guard catches a revocation microtask before overwrite
+ok 37 - synchronous last guard catches a revocation microtask before overwrite
+  ---
+  duration_ms: 90.010082
+  type: 'test'
+  ...
+# Subtest: synchronous last guard catches a revocation microtask before creation
+ok 38 - synchronous last guard catches a revocation microtask before creation
+  ---
+  duration_ms: 98.510659
+  type: 'test'
+  ...
+# Subtest: post-publication revocation reports the committed write and never claims it was unapplied
+ok 39 - post-publication revocation reports the committed write and never claims it was unapplied
+  ---
+  duration_ms: 123.632316
+  type: 'test'
+  ...
+# Subtest: closed scopes and asynchronous final guards cannot authorize whole-file writes
+ok 40 - closed scopes and asynchronous final guards cannot authorize whole-file writes
+  ---
+  duration_ms: 136.886365
+  type: 'test'
+  ...
+# Subtest: whole writes enforce the bounded Buffer contract before state or filesystem publication
+ok 41 - whole writes enforce the bounded Buffer contract before state or filesystem publication
+  ---
+  duration_ms: 0.585712
+  type: 'test'
+  ...
+# (node:43389) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: read receipts describe exactly materialized bytes and disjoint edits survive rebasing
+ok 42 - read receipts describe exactly materialized bytes and disjoint edits survive rebasing
+  ---
+  duration_ms: 260.829395
+  type: 'test'
+  ...
+# Subtest: overlapping readers share reads, then a changed dependency demands repair
+ok 43 - overlapping readers share reads, then a changed dependency demands repair
+  ---
+  duration_ms: 270.221012
+  type: 'test'
+  ...
+# Subtest: a dependency on another file blocks the patch until its actual changed region is reread
+ok 44 - a dependency on another file blocks the patch until its actual changed region is reread
+  ---
+  duration_ms: 321.772867
+  type: 'test'
+  ...
+# Subtest: a receipt from another scope cannot establish authority and missing reads do not become empty evidence
+ok 45 - a receipt from another scope cannot establish authority and missing reads do not become empty evidence
+  ---
+  duration_ms: 130.910956
+  type: 'test'
+  ...
+# Subtest: text validation and scope revocation happen before release and cannot manufacture usable reads
+ok 46 - text validation and scope revocation happen before release and cannot manufacture usable reads
+  ---
+  duration_ms: 108.092941
+  type: 'test'
+  ...
+# Subtest: scope closure is durable and a second authority cannot reopen it
+ok 47 - scope closure is durable and a second authority cannot reopen it
+  ---
+  duration_ms: 126.884434
+  type: 'test'
+  ...
+# Subtest: microtask revocation after an async admission check is caught before synchronous publication
+ok 48 - microtask revocation after an async admission check is caught before synchronous publication
+  ---
+  duration_ms: 120.621511
+  type: 'test'
+  ...
+# Subtest: an async publisher receives a synchronous final guard and cannot publish after revocation
+ok 49 - an async publisher receives a synchronous final guard and cannot publish after revocation
+  ---
+  duration_ms: 130.074622
+  type: 'test'
+  ...
+# Subtest: revocation after publication records its committed effect without releasing content or claiming no write
+ok 50 - revocation after publication records its committed effect without releasing content or claiming no write
+  ---
+  duration_ms: 140.263558
+  type: 'test'
+  ...
+# Subtest: promise-returning final scope guards are refused before read receipt persistence
+ok 51 - promise-returning final scope guards are refused before read receipt persistence
+  ---
+  duration_ms: 64.216063
+  type: 'test'
+  ...
+# Subtest: unmediated changes invalidate coordinates and cannot be acknowledged by an unrelated partial reread
+ok 52 - unmediated changes invalidate coordinates and cannot be acknowledged by an unrelated partial reread
+  ---
+  duration_ms: 196.147373
+  type: 'test'
+  ...
+# Subtest: no-op patch neither publishes nor invalidates another reader
+ok 53 - no-op patch neither publishes nor invalidates another reader
+  ---
+  duration_ms: 206.083479
+  type: 'test'
+  ...
+# Subtest: an expired dependency must be reread and stored observations survive a fresh connection
+ok 54 - an expired dependency must be reread and stored observations survive a fresh connection
+  ---
+  duration_ms: 156.690474
+  type: 'test'
+  ...
+# Subtest: boundary insertion preserves the left reader and requires repair by the right reader
+ok 55 - boundary insertion preserves the left reader and requires repair by the right reader
+  ---
+  duration_ms: 342.348271
+  type: 'test'
+  ...
+# Subtest: a real empty-file observation admits insertion and EOF append without inventing a new receipt
+ok 56 - a real empty-file observation admits insertion and EOF append without inventing a new receipt
+  ---
+  duration_ms: 220.013115
+  type: 'test'
+  ...
+# Subtest: deleting observed bytes leaves a point repair and shifts an adjacent disjoint reader safely
+ok 57 - deleting observed bytes leaves a point repair and shifts an adjacent disjoint reader safely
+  ---
+  duration_ms: 244.660081
+  type: 'test'
+  ...
+# Subtest: lockfile policy invalidates the whole observation and requires a whole-file repair
+ok 58 - lockfile policy invalidates the whole observation and requires a whole-file repair
+  ---
+  duration_ms: 131.584188
+  type: 'test'
+  ...
+1..58
+# tests 58
+# suites 0
+# pass 58
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3216.389437

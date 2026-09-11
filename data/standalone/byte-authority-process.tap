@@ -1,0 +1,72 @@
+TAP version 13
+# Subtest: two actual processes retain disjoint edits, including shifted byte coordinates
+ok 1 - two actual processes retain disjoint edits, including shifted byte coordinates
+  ---
+  duration_ms: 195.924408
+  type: 'test'
+  ...
+# (node:1414572) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: a real competing process cannot publish while another lifetime transaction remains held
+ok 2 - a real competing process cannot publish while another lifetime transaction remains held
+  ---
+  duration_ms: 288.844352
+  type: 'test'
+  ...
+# Subtest: actual process exit at crash-before releases its OS lock and preserves the publication journal
+ok 3 - actual process exit at crash-before releases its OS lock and preserves the publication journal
+  ---
+  duration_ms: 185.5692
+  type: 'test'
+  ...
+# Subtest: actual process exit at crash-after releases its OS lock and preserves the publication journal
+ok 4 - actual process exit at crash-after releases its OS lock and preserves the publication journal
+  ---
+  duration_ms: 171.598343
+  type: 'test'
+  ...
+# Subtest: real blind writers serialize whole-file publication without creating read receipts
+ok 5 - real blind writers serialize whole-file publication without creating read receipts
+  ---
+  duration_ms: 149.946337
+  type: 'test'
+  ...
+# Subtest: two real blind writers on an absent resource perform one creation then one explicit overwrite
+ok 6 - two real blind writers on an absent resource perform one creation then one explicit overwrite
+  ---
+  duration_ms: 135.602875
+  type: 'test'
+  ...
+# Subtest: real creation process exit at crash-before releases the lifetime lock and recovers only its staged identity
+ok 7 - real creation process exit at crash-before releases the lifetime lock and recovers only its staged identity
+  ---
+  duration_ms: 120.641653
+  type: 'test'
+  ...
+# Subtest: real creation process exit at crash-after-link releases the lifetime lock and recovers only its staged identity
+ok 8 - real creation process exit at crash-after-link releases the lifetime lock and recovers only its staged identity
+  ---
+  duration_ms: 124.536409
+  type: 'test'
+  ...
+# Subtest: real creation process exit at crash-after releases the lifetime lock and recovers only its staged identity
+ok 9 - real creation process exit at crash-after releases the lifetime lock and recovers only its staged identity
+  ---
+  duration_ms: 133.020472
+  type: 'test'
+  ...
+# Subtest: a real crash after staging but before its journal cannot imply publication or authorize a cleanup sweep
+ok 10 - a real crash after staging but before its journal cannot imply publication or authorize a cleanup sweep
+  ---
+  duration_ms: 100.580775
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1647.24162

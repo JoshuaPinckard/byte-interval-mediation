@@ -1,0 +1,79 @@
+engine single-file run 2026-09-10T23:07:40Z
+cwd: <workspace>/engine  HEAD: c34cab8c7845b8c1ef58f0a94fc5693ab6459cdf
+env set explicitly (rule 20): TOOLSENABLED_STATE_ROOT=MC_TEST_STATE_ROOT=<B1 scratch-state/capability> TOOLSENABLED_VAULT_PATH=<B1 scratch-state/vault> TMPDIR=/tmp PYTHONDONTWRITEBYTECODE=1; run-isolated.js gives the child its own isolated root; this test stubs the runtime vault (getSecret throws)
+command: node tests/run-isolated.js tests/remote-byte-scope.test.js   (one file, one process; link 4 not run)
+sensors before: SEN1=55 SEN2=60 SEN3=56 load1=0.95
+----
+TAP version 13
+# Subtest: unauthenticated and caller-labelled handshakes mint no file authority
+ok 1 - unauthenticated and caller-labelled handshakes mint no file authority
+  ---
+  duration_ms: 11.35039
+  type: 'test'
+  ...
+# Subtest: each authenticated socket gets one stable anonymous scope, never a caller-supplied identity
+ok 2 - each authenticated socket gets one stable anonymous scope, never a caller-supplied identity
+  ---
+  duration_ms: 4.344544
+  type: 'test'
+  ...
+# Subtest: disconnect retires only that peer and invokes its registered lease cleanup
+ok 3 - disconnect retires only that peer and invokes its registered lease cleanup
+  ---
+  duration_ms: 2.588602
+  type: 'test'
+  ...
+# Subtest: token rotation revokes scopes synchronously; identical tokens preserve them and reauthentication gets a new scope
+ok 4 - token rotation revokes scopes synchronously; identical tokens preserve them and reauthentication gets a new scope
+  ---
+  duration_ms: 2.098904
+  type: 'test'
+  ...
+# Subtest: queued requests cannot dispatch after disconnect
+ok 5 - queued requests cannot dispatch after disconnect
+  ---
+  duration_ms: 2.027722
+  type: 'test'
+  ...
+# Subtest: queued requests cannot dispatch after token rotation
+ok 6 - queued requests cannot dispatch after token rotation
+  ---
+  duration_ms: 1.976721
+  type: 'test'
+  ...
+# Subtest: queued requests cannot dispatch after shutdown
+ok 7 - queued requests cannot dispatch after shutdown
+  ---
+  duration_ms: 1.357316
+  type: 'test'
+  ...
+# Subtest: shutdown revokes active scopes immediately and closes authenticated and pre-authentication sockets
+ok 8 - shutdown revokes active scopes immediately and closes authenticated and pre-authentication sockets
+  ---
+  duration_ms: 1.620883
+  type: 'test'
+  ...
+# Subtest: confirmed credential removal revokes scopes before asynchronous socket close
+ok 9 - confirmed credential removal revokes scopes before asynchronous socket close
+  ---
+  duration_ms: 1.776329
+  type: 'test'
+  ...
+# Subtest: failed durable cleanup never restores file authority or prevents disconnection
+ok 10 - failed durable cleanup never restores file authority or prevents disconnection
+  ---
+  duration_ms: 1.75244
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 36.086311
+----
+exit: 0
+sensors after: SEN1=55 SEN2=60 SEN3=56 load1=0.95

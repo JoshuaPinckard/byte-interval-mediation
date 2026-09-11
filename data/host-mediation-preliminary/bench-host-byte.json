@@ -1,0 +1,129 @@
+{
+  "node": "v22.19.0",
+  "startedAt": "2026-09-11T07:23:10.218Z",
+  "latency": {
+    "unit": "ms per host.read_file + host.write_file round trip (100 KB, executeTool)",
+    "mediated": {
+      "n": 100,
+      "p50": 266.01,
+      "p95": 334.26,
+      "mean": 275.27,
+      "max": 421.39
+    },
+    "legacy": {
+      "n": 100,
+      "p50": 213.73,
+      "p95": 266.01,
+      "mean": 220.63,
+      "max": 288.39
+    },
+    "overheadP50": 52.28,
+    "overheadP95": 68.25
+  },
+  "retentionPruned": {
+    "writes": 500,
+    "bytesPerWrite": 102400,
+    "storeBytesBefore": 1794048,
+    "storeBytesAfter": 6725632,
+    "seconds": 92.844,
+    "tables": {
+      "operations": {
+        "n": 610,
+        "bytes": 1478789
+      },
+      "events": {
+        "n": 1943,
+        "bytes": 2032218
+      },
+      "receipts": {
+        "n": 721,
+        "bytes": 573520
+      },
+      "reads": {
+        "n": 2,
+        "bytes": 204800
+      },
+      "pageCount": 1640,
+      "freelist": 98
+    },
+    "growthBytes": 4931584
+  },
+  "retentionSpread": {
+    "writes": 500,
+    "files": 50,
+    "storeBytesBefore": 6725632,
+    "storeBytesAfter": 16678912,
+    "tables": {
+      "operations": {
+        "n": 1110,
+        "bytes": 2694789
+      },
+      "events": {
+        "n": 3444,
+        "bytes": 3638933
+      },
+      "receipts": {
+        "n": 1221,
+        "bytes": 980020
+      },
+      "reads": {
+        "n": 52,
+        "bytes": 5324800
+      },
+      "pageCount": 4070,
+      "freelist": 98
+    },
+    "growthBytes": 9953280,
+    "afterScopeClose": {
+      "storeBytes": 16678912,
+      "tables": {
+        "operations": {
+          "n": 1110,
+          "bytes": 2694789
+        },
+        "events": {
+          "n": 3445,
+          "bytes": 3639172
+        },
+        "receipts": {
+          "n": 1221,
+          "bytes": 980020
+        },
+        "reads": {
+          "n": 2,
+          "bytes": 204800
+        },
+        "pageCount": 4070,
+        "freelist": 1362
+      }
+    }
+  },
+  "retentionUnpruned": {
+    "writes": 500,
+    "bytesPerWrite": 102400,
+    "storeBytesBefore": 184320,
+    "storeBytesAfter": 141332480,
+    "tables": {
+      "operations": {
+        "n": 500,
+        "bytes": 69424814
+      },
+      "events": {
+        "n": 1502,
+        "bytes": 69817999
+      },
+      "receipts": {
+        "n": 501,
+        "bytes": 408249
+      },
+      "reads": {
+        "n": 1,
+        "bytes": 102400
+      },
+      "pageCount": 34503,
+      "freelist": 31
+    },
+    "growthBytes": 141148160
+  },
+  "finishedAt": "2026-09-11T07:27:42.492Z"
+}

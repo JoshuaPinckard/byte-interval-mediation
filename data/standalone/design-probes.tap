@@ -1,0 +1,48 @@
+TAP version 13
+# (node:1416601) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: deleted obsolete dependency strands unrelated later writes in the same scope
+ok 1 - deleted obsolete dependency strands unrelated later writes in the same scope
+  ---
+  duration_ms: 102.489237
+  type: 'test'
+  ...
+# Subtest: a second reader expires unchanged dependencies after 60 seconds
+ok 2 - a second reader expires unchanged dependencies after 60 seconds
+  ---
+  duration_ms: 72.239761
+  type: 'test'
+  ...
+# Subtest: a blind writer can overwrite a peer edit using stale bytes obtained outside mediated reads
+ok 3 - a blind writer can overwrite a peer edit using stale bytes obtained outside mediated reads
+  ---
+  duration_ms: 112.573989
+  type: 'test'
+  ...
+# Subtest: disjoint fresh byte claims do not enforce a cross-region semantic invariant
+ok 4 - disjoint fresh byte claims do not enforce a cross-region semantic invariant
+  ---
+  duration_ms: 121.921508
+  type: 'test'
+  ...
+# Subtest: a fresh scope with inherited unmediated context has no predecessor dependency check
+ok 5 - a fresh scope with inherited unmediated context has no predecessor dependency check
+  ---
+  duration_ms: 162.809566
+  type: 'test'
+  ...
+# Subtest: committed whole-file contents remain in the coordination database after scope closure
+ok 6 - committed whole-file contents remain in the coordination database after scope closure
+  ---
+  duration_ms: 72.628646
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 685.13873

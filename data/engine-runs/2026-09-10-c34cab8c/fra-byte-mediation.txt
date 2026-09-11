@@ -1,0 +1,93 @@
+engine single-file run 2026-09-10T23:07:01Z
+cwd: <workspace>/engine  HEAD: c34cab8c7845b8c1ef58f0a94fc5693ab6459cdf
+env set explicitly (rule 20): TOOLSENABLED_STATE_ROOT=MC_TEST_STATE_ROOT=<B1 scratch-state/capability> TOOLSENABLED_VAULT_PATH=<B1 scratch-state/vault> TMPDIR=/tmp PYTHONDONTWRITEBYTECODE=1; run-isolated.js gives the child its own isolated root
+command: node tests/run-isolated.js tests/fra-byte-mediation.test.js   (one file, one process; link 4 not run)
+sensors before: SEN1=54 SEN2=59 SEN3=55 load1=0.89
+----
+(node:278930) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# Subtest: accepted FRA read and local repo writer share actual authority and exact byte coordinates
+ok 1 - accepted FRA read and local repo writer share actual authority and exact byte coordinates
+  ---
+  duration_ms: 1172.40338
+  type: 'test'
+  ...
+# Subtest: UTF-8, BOM, Base64, empty files and offsets beyond EOF receipt only the exact returned window
+ok 2 - UTF-8, BOM, Base64, empty files and offsets beyond EOF receipt only the exact returned window
+  ---
+  duration_ms: 726.321937
+  type: 'test'
+  ...
+# Subtest: an unanchored audit cannot release content or create a byte receipt
+ok 3 - an unanchored audit cannot release content or create a byte receipt
+  ---
+  duration_ms: 290.541127
+  type: 'test'
+  ...
+# Subtest: same-byte replacement and hard-link aliases fail closed without false observations
+ok 4 - same-byte replacement and hard-link aliases fail closed without false observations
+  ---
+  duration_ms: 575.473843
+  type: 'test'
+  ...
+# Subtest: generation retirement while the real authority lock is held cannot release queued bytes
+ok 5 - generation retirement while the real authority lock is held cannot release queued bytes
+  ---
+  duration_ms: 388.774984
+  type: 'test'
+  ...
+# Subtest: revocation after receipt commit withholds wire content without inventing receipt rollback
+ok 6 - revocation after receipt commit withholds wire content without inventing receipt rollback
+  ---
+  duration_ms: 320.608022
+  type: 'test'
+  ...
+# Subtest: publication cannot interleave between handle snapshot validation and durable observation
+ok 7 - publication cannot interleave between handle snapshot validation and durable observation
+  ---
+  duration_ms: 595.810834
+  type: 'test'
+  ...
+# Subtest: long handle paths remain readable while the public repo path-input bound stays unchanged
+ok 8 - long handle paths remain readable while the public repo path-input bound stays unchanged
+  ---
+  duration_ms: 946.442283
+  type: 'test'
+  ...
+# Subtest: public context copies, other private scopes and echoed invocation metadata cannot authorize FRA reads
+ok 9 - public context copies, other private scopes and echoed invocation metadata cannot authorize FRA reads
+  ---
+  duration_ms: 1004.394718
+  type: 'test'
+  ...
+# Subtest: final bound response checks retirement after the provider returned and strict MCP audit recorded success
+ok 10 - final bound response checks retirement after the provider returned and strict MCP audit recorded success
+  ---
+  duration_ms: 410.131025
+  type: 'test'
+  ...
+# Subtest: shared pending-write recovery precedes the requested handle snapshot and unrelated UNKNOWN stays scoped
+ok 11 - shared pending-write recovery precedes the requested handle snapshot and unrelated UNKNOWN stays scoped
+  ---
+  duration_ms: 908.486024
+  type: 'test'
+  ...
+# Subtest: an ancestor junction cannot move an existing handle outside the fixed repository root
+ok 12 - an ancestor junction cannot move an existing handle outside the fixed repository root
+  ---
+  duration_ms: 564.730609
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7907.981717
+----
+exit: 0
+sensors after: SEN1=54 SEN2=60 SEN3=55 load1=1.14

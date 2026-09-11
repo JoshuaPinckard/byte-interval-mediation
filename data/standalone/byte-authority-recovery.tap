@@ -1,0 +1,60 @@
+TAP version 13
+# (node:1415280) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: failed publication remains prepared and retry automatically records unapplied bytes before a new publication
+ok 1 - failed publication remains prepared and retry automatically records unapplied bytes before a new publication
+  ---
+  duration_ms: 111.582043
+  type: 'test'
+  ...
+# Subtest: publication followed by an outcome failure recovers byte identity and reader invalidation exactly once
+ok 2 - publication followed by an outcome failure recovers byte identity and reader invalidation exactly once
+  ---
+  duration_ms: 106.481558
+  type: 'test'
+  ...
+# Subtest: unexpected recovered bytes remain quarantined while an unrelated scope and resource still work
+ok 3 - unexpected recovered bytes remain quarantined while an unrelated scope and resource still work
+  ---
+  duration_ms: 165.48785
+  type: 'test'
+  ...
+# Subtest: a pending materialized edit to another read dependency is recovered before allowing a target patch
+ok 4 - a pending materialized edit to another read dependency is recovered before allowing a target patch
+  ---
+  duration_ms: 156.507304
+  type: 'test'
+  ...
+# Subtest: missing recorded state refuses before materializing a file
+ok 5 - missing recorded state refuses before materializing a file
+  ---
+  duration_ms: 48.115231
+  type: 'test'
+  ...
+# Subtest: pending operation corruption is refused before recovery can change read projections
+ok 6 - pending operation corruption is refused before recovery can change read projections
+  ---
+  duration_ms: 71.84876
+  type: 'test'
+  ...
+# Subtest: loss of a resource version is corruption, not permission to manufacture a new empty index
+ok 7 - loss of a resource version is corruption, not permission to manufacture a new empty index
+  ---
+  duration_ms: 60.046155
+  type: 'test'
+  ...
+# Subtest: interrupted no-op recovery records an observation with no invented publication effect
+ok 8 - interrupted no-op recovery records an observation with no invented publication effect
+  ---
+  duration_ms: 82.472933
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 838.993668

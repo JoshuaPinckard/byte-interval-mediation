@@ -1,0 +1,129 @@
+engine single-file run 2026-09-10T23:06:50Z
+cwd: <workspace>/engine  HEAD: c34cab8c7845b8c1ef58f0a94fc5693ab6459cdf
+env set explicitly (rule 20): TOOLSENABLED_STATE_ROOT=MC_TEST_STATE_ROOT=<B1 scratch-state/capability> TOOLSENABLED_VAULT_PATH=<B1 scratch-state/vault> TMPDIR=/tmp PYTHONDONTWRITEBYTECODE=1; run-isolated.js gives the child its own isolated root
+command: node tests/run-isolated.js tests/byte-authority-write-recovery.test.js   (one file, one process; link 4 not run)
+sensors before: SEN1=54 SEN2=59 SEN3=55 load1=0.67
+----
+(node:278757) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# Subtest: create journal is durable before the real no-replace publisher runs
+ok 1 - create journal is durable before the real no-replace publisher runs
+  ---
+  duration_ms: 74.448887
+  type: 'test'
+  ...
+# Subtest: revocation after stage preparation but before its journal leaves no target or invented cleanup ownership
+ok 2 - revocation after stage preparation but before its journal leaves no target or invented cleanup ownership
+  ---
+  duration_ms: 47.686782
+  type: 'test'
+  ...
+# Subtest: failure before create publication recovers absence and retires only its exact owned stage
+ok 3 - failure before create publication recovers absence and retires only its exact owned stage
+  ---
+  duration_ms: 92.878449
+  type: 'test'
+  ...
+# Subtest: recovery after link before stage unlink proves exact identity for nonempty creation
+ok 4 - recovery after link before stage unlink proves exact identity for nonempty creation
+  ---
+  duration_ms: 88.161526
+  type: 'test'
+  ...
+# Subtest: recovery after link before stage unlink proves exact identity for empty creation
+ok 5 - recovery after link before stage unlink proves exact identity for empty creation
+  ---
+  duration_ms: 85.986671
+  type: 'test'
+  ...
+# Subtest: a failed confirmation after completed creation automatically recovers before the next real read
+ok 6 - a failed confirmation after completed creation automatically recovers before the next real read
+  ---
+  duration_ms: 75.626478
+  type: 'test'
+  ...
+# Subtest: no-replace creation preserves a racing target even when its bytes differ
+ok 7 - no-replace creation preserves a racing target even when its bytes differ
+  ---
+  duration_ms: 113.761395
+  type: 'test'
+  ...
+# Subtest: no-replace creation preserves a racing target even when its bytes match
+ok 8 - no-replace creation preserves a racing target even when its bytes match
+  ---
+  duration_ms: 111.854151
+  type: 'test'
+  ...
+# Subtest: an extra hard-link alias makes interrupted creation UNKNOWN without deleting any evidence
+ok 9 - an extra hard-link alias makes interrupted creation UNKNOWN without deleting any evidence
+  ---
+  duration_ms: 66.397123
+  type: 'test'
+  ...
+# Subtest: substituting an equal-content target after creation is not recovered as the prepared file identity
+ok 10 - substituting an equal-content target after creation is not recovered as the prepared file identity
+  ---
+  duration_ms: 63.287107
+  type: 'test'
+  ...
+# Subtest: equal-content replacement between publication reconciliation and confirmation cannot commit our creation
+ok 11 - equal-content replacement between publication reconciliation and confirmation cannot commit our creation
+  ---
+  duration_ms: 61.83271
+  type: 'test'
+  ...
+# Subtest: equal-content replacement after recovery reconciliation is detected by the final materialized identity
+ok 12 - equal-content replacement after recovery reconciliation is detected by the final materialized identity
+  ---
+  duration_ms: 61.32624
+  type: 'test'
+  ...
+# Subtest: a byte-only legacy materializer cannot confirm a new file without its exact staged identity
+ok 13 - a byte-only legacy materializer cannot confirm a new file without its exact staged identity
+  ---
+  duration_ms: 61.688997
+  type: 'test'
+  ...
+# Subtest: a checksummed but arbitrary persisted stage path is rejected before invoking recovery adapters
+ok 14 - a checksummed but arbitrary persisted stage path is rejected before invoking recovery adapters
+  ---
+  duration_ms: 60.167759
+  type: 'test'
+  ...
+# Subtest: whole-write recovery invalidates old read sets exactly once without manufacturing a read
+ok 15 - whole-write recovery invalidates old read sets exactly once without manufacturing a read
+  ---
+  duration_ms: 80.06287
+  type: 'test'
+  ...
+# Subtest: schema v1 migration preserves exact journal/receipt JSON and recovers the before image
+ok 16 - schema v1 migration preserves exact journal/receipt JSON and recovers the before image
+  ---
+  duration_ms: 149.508417
+  type: 'test'
+  ...
+# Subtest: schema v1 migration preserves exact journal/receipt JSON and recovers the after image
+ok 17 - schema v1 migration preserves exact journal/receipt JSON and recovers the after image
+  ---
+  duration_ms: 149.477284
+  type: 'test'
+  ...
+# Subtest: failed migration rolls back schema/version and preserves its v1 journal for a later recovery
+ok 18 - failed migration rolls back schema/version and preserves its v1 journal for a later recovery
+  ---
+  duration_ms: 109.481456
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1563.194054
+----
+exit: 0
+sensors after: SEN1=54 SEN2=59 SEN3=55 load1=0.78

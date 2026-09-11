@@ -1,0 +1,123 @@
+engine single-file run 2026-09-10T23:06:45Z
+cwd: <workspace>/engine  HEAD: c34cab8c7845b8c1ef58f0a94fc5693ab6459cdf
+env set explicitly (rule 20): TOOLSENABLED_STATE_ROOT=MC_TEST_STATE_ROOT=<B1 scratch-state/capability> TOOLSENABLED_VAULT_PATH=<B1 scratch-state/vault> TMPDIR=/tmp PYTHONDONTWRITEBYTECODE=1; run-isolated.js gives the child its own isolated root
+command: node tests/run-isolated.js tests/byte-authority.test.js   (one file, one process; link 4 not run)
+sensors before: SEN1=54 SEN2=59 SEN3=55 load1=0.56
+----
+(node:278400) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# Subtest: read receipts describe exactly materialized bytes and disjoint edits survive rebasing
+ok 1 - read receipts describe exactly materialized bytes and disjoint edits survive rebasing
+  ---
+  duration_ms: 137.266476
+  type: 'test'
+  ...
+# Subtest: overlapping readers share reads, then a changed dependency demands repair
+ok 2 - overlapping readers share reads, then a changed dependency demands repair
+  ---
+  duration_ms: 124.271864
+  type: 'test'
+  ...
+# Subtest: a dependency on another file blocks the patch until its actual changed region is reread
+ok 3 - a dependency on another file blocks the patch until its actual changed region is reread
+  ---
+  duration_ms: 151.156862
+  type: 'test'
+  ...
+# Subtest: a receipt from another scope cannot establish authority and missing reads do not become empty evidence
+ok 4 - a receipt from another scope cannot establish authority and missing reads do not become empty evidence
+  ---
+  duration_ms: 56.373144
+  type: 'test'
+  ...
+# Subtest: text validation and scope revocation happen before release and cannot manufacture usable reads
+ok 5 - text validation and scope revocation happen before release and cannot manufacture usable reads
+  ---
+  duration_ms: 48.141997
+  type: 'test'
+  ...
+# Subtest: scope closure is durable and a second authority cannot reopen it
+ok 6 - scope closure is durable and a second authority cannot reopen it
+  ---
+  duration_ms: 60.009186
+  type: 'test'
+  ...
+# Subtest: microtask revocation after an async admission check is caught before synchronous publication
+ok 7 - microtask revocation after an async admission check is caught before synchronous publication
+  ---
+  duration_ms: 60.29692
+  type: 'test'
+  ...
+# Subtest: an async publisher receives a synchronous final guard and cannot publish after revocation
+ok 8 - an async publisher receives a synchronous final guard and cannot publish after revocation
+  ---
+  duration_ms: 57.040409
+  type: 'test'
+  ...
+# Subtest: revocation after publication records its committed effect without releasing content or claiming no write
+ok 9 - revocation after publication records its committed effect without releasing content or claiming no write
+  ---
+  duration_ms: 71.100084
+  type: 'test'
+  ...
+# Subtest: promise-returning final scope guards are refused before read receipt persistence
+ok 10 - promise-returning final scope guards are refused before read receipt persistence
+  ---
+  duration_ms: 28.638602
+  type: 'test'
+  ...
+# Subtest: unmediated changes invalidate coordinates and cannot be acknowledged by an unrelated partial reread
+ok 11 - unmediated changes invalidate coordinates and cannot be acknowledged by an unrelated partial reread
+  ---
+  duration_ms: 97.775903
+  type: 'test'
+  ...
+# Subtest: no-op patch neither publishes nor invalidates another reader
+ok 12 - no-op patch neither publishes nor invalidates another reader
+  ---
+  duration_ms: 107.268539
+  type: 'test'
+  ...
+# Subtest: an expired dependency must be reread and stored observations survive a fresh connection
+ok 13 - an expired dependency must be reread and stored observations survive a fresh connection
+  ---
+  duration_ms: 84.857377
+  type: 'test'
+  ...
+# Subtest: boundary insertion preserves the left reader and requires repair by the right reader
+ok 14 - boundary insertion preserves the left reader and requires repair by the right reader
+  ---
+  duration_ms: 182.966235
+  type: 'test'
+  ...
+# Subtest: a real empty-file observation admits insertion and EOF append without inventing a new receipt
+ok 15 - a real empty-file observation admits insertion and EOF append without inventing a new receipt
+  ---
+  duration_ms: 123.877258
+  type: 'test'
+  ...
+# Subtest: deleting observed bytes leaves a point repair and shifts an adjacent disjoint reader safely
+ok 16 - deleting observed bytes leaves a point repair and shifts an adjacent disjoint reader safely
+  ---
+  duration_ms: 174.981005
+  type: 'test'
+  ...
+# Subtest: lockfile policy invalidates the whole observation and requires a whole-file repair
+ok 17 - lockfile policy invalidates the whole observation and requires a whole-file repair
+  ---
+  duration_ms: 140.036961
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1716.105479
+----
+exit: 0
+sensors after: SEN1=54 SEN2=59 SEN3=55 load1=0.67

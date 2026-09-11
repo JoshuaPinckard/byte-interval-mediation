@@ -1,0 +1,114 @@
+TAP version 13
+# (node:1415486) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: read receipts describe exactly materialized bytes and disjoint edits survive rebasing
+ok 1 - read receipts describe exactly materialized bytes and disjoint edits survive rebasing
+  ---
+  duration_ms: 137.720242
+  type: 'test'
+  ...
+# Subtest: overlapping readers share reads, then a changed dependency demands repair
+ok 2 - overlapping readers share reads, then a changed dependency demands repair
+  ---
+  duration_ms: 146.525474
+  type: 'test'
+  ...
+# Subtest: a dependency on another file blocks the patch until its actual changed region is reread
+ok 3 - a dependency on another file blocks the patch until its actual changed region is reread
+  ---
+  duration_ms: 168.404312
+  type: 'test'
+  ...
+# Subtest: a receipt from another scope cannot establish authority and missing reads do not become empty evidence
+ok 4 - a receipt from another scope cannot establish authority and missing reads do not become empty evidence
+  ---
+  duration_ms: 67.458704
+  type: 'test'
+  ...
+# Subtest: text validation and scope revocation happen before release and cannot manufacture usable reads
+ok 5 - text validation and scope revocation happen before release and cannot manufacture usable reads
+  ---
+  duration_ms: 55.404694
+  type: 'test'
+  ...
+# Subtest: scope closure is durable and a second authority cannot reopen it
+ok 6 - scope closure is durable and a second authority cannot reopen it
+  ---
+  duration_ms: 65.62024
+  type: 'test'
+  ...
+# Subtest: microtask revocation after an async admission check is caught before synchronous publication
+ok 7 - microtask revocation after an async admission check is caught before synchronous publication
+  ---
+  duration_ms: 66.887203
+  type: 'test'
+  ...
+# Subtest: an async publisher receives a synchronous final guard and cannot publish after revocation
+ok 8 - an async publisher receives a synchronous final guard and cannot publish after revocation
+  ---
+  duration_ms: 65.805261
+  type: 'test'
+  ...
+# Subtest: revocation after publication records its committed effect without releasing content or claiming no write
+ok 9 - revocation after publication records its committed effect without releasing content or claiming no write
+  ---
+  duration_ms: 84.882817
+  type: 'test'
+  ...
+# Subtest: promise-returning final scope guards are refused before read receipt persistence
+ok 10 - promise-returning final scope guards are refused before read receipt persistence
+  ---
+  duration_ms: 29.561958
+  type: 'test'
+  ...
+# Subtest: unmediated changes invalidate coordinates and cannot be acknowledged by an unrelated partial reread
+ok 11 - unmediated changes invalidate coordinates and cannot be acknowledged by an unrelated partial reread
+  ---
+  duration_ms: 112.117765
+  type: 'test'
+  ...
+# Subtest: no-op patch neither publishes nor invalidates another reader
+ok 12 - no-op patch neither publishes nor invalidates another reader
+  ---
+  duration_ms: 132.37705
+  type: 'test'
+  ...
+# Subtest: an expired dependency must be reread and stored observations survive a fresh connection
+ok 13 - an expired dependency must be reread and stored observations survive a fresh connection
+  ---
+  duration_ms: 90.866333
+  type: 'test'
+  ...
+# Subtest: boundary insertion preserves the left reader and requires repair by the right reader
+ok 14 - boundary insertion preserves the left reader and requires repair by the right reader
+  ---
+  duration_ms: 205.207965
+  type: 'test'
+  ...
+# Subtest: a real empty-file observation admits insertion and EOF append without inventing a new receipt
+ok 15 - a real empty-file observation admits insertion and EOF append without inventing a new receipt
+  ---
+  duration_ms: 120.033593
+  type: 'test'
+  ...
+# Subtest: deleting observed bytes leaves a point repair and shifts an adjacent disjoint reader safely
+ok 16 - deleting observed bytes leaves a point repair and shifts an adjacent disjoint reader safely
+  ---
+  duration_ms: 192.226403
+  type: 'test'
+  ...
+# Subtest: lockfile policy invalidates the whole observation and requires a whole-file repair
+ok 17 - lockfile policy invalidates the whole observation and requires a whole-file repair
+  ---
+  duration_ms: 150.236117
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1932.867106

@@ -1,0 +1,17 @@
+run,code,date,file,tests,pass,fail,skipped
+standalone,this repository,2026-09-11,data/standalone/byte-authority-process.tap,10,10,0,0
+standalone,this repository,2026-09-11,data/standalone/byte-authority-recovery.tap,8,8,0,0
+standalone,this repository,2026-09-11,data/standalone/byte-authority-write-recovery.tap,18,18,0,0
+standalone,this repository,2026-09-11,data/standalone/byte-authority-write.tap,15,15,0,0
+standalone,this repository,2026-09-11,data/standalone/byte-authority.tap,17,17,0,0
+standalone,this repository,2026-09-11,data/standalone/design-probes.tap,6,6,0,0
+engine,engine c34cab8c,2026-09-10,data/engine-runs/2026-09-10-c34cab8c/byte-authority-process.txt,10,10,0,0
+engine,engine c34cab8c,2026-09-10,data/engine-runs/2026-09-10-c34cab8c/byte-authority-recovery.txt,8,8,0,0
+engine,engine c34cab8c,2026-09-10,data/engine-runs/2026-09-10-c34cab8c/byte-authority-write-recovery.txt,18,18,0,0
+engine,engine c34cab8c,2026-09-10,data/engine-runs/2026-09-10-c34cab8c/byte-authority-write.txt,15,15,0,0
+engine,engine c34cab8c,2026-09-10,data/engine-runs/2026-09-10-c34cab8c/byte-authority.txt,17,17,0,0
+engine,engine c34cab8c,2026-09-10,data/engine-runs/2026-09-10-c34cab8c/fra-byte-mediation.txt,12,12,0,0
+engine,engine c34cab8c,2026-09-10,data/engine-runs/2026-09-10-c34cab8c/remote-byte-scope.txt,10,10,0,0
+engine,engine c34cab8c,2026-09-10,data/engine-runs/2026-09-10-c34cab8c/repo-byte-transport.txt,27,27,0,0
+engine,engine snapshot,2026-09-07,data/engine-runs/2026-09-07/byte-authority-four-suites.tap,58,58,0,0
+engine,engine snapshot,2026-09-07,data/engine-runs/2026-09-07/design-probes.tap,7,7,0,0

@@ -1,0 +1,10 @@
+node v22.19.0
+platform linux x64
+date 2026-09-11T07:16:18Z
+runner: one file per process, sequential, each wrapped in a local thermal gate
+byte-authority-process exit=0
+byte-authority-recovery exit=0
+byte-authority exit=0
+byte-authority-write-recovery exit=0
+byte-authority-write exit=0
+design-probes exit=0

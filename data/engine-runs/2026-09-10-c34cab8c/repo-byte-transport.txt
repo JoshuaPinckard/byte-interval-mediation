@@ -1,0 +1,181 @@
+engine single-file run 2026-09-10T23:06:52Z
+cwd: <workspace>/engine  HEAD: c34cab8c7845b8c1ef58f0a94fc5693ab6459cdf
+env set explicitly (rule 20): TOOLSENABLED_STATE_ROOT=MC_TEST_STATE_ROOT=<B1 scratch-state/capability> TOOLSENABLED_VAULT_PATH=<B1 scratch-state/vault> TMPDIR=/tmp PYTHONDONTWRITEBYTECODE=1; run-isolated.js gives the child its own isolated root
+command: node tests/run-isolated.js tests/repo-byte-transport.test.js   (one file, one process; link 4 not run)
+sensors before: SEN1=54 SEN2=59 SEN3=55 load1=0.78
+----
+TAP version 13
+# Subtest: private scopes cannot be cloned or forged and do not invent canonical launch evidence
+ok 1 - private scopes cannot be cloned or forged and do not invent canonical launch evidence
+  ---
+  duration_ms: 1.32155
+  type: 'test'
+  ...
+# Subtest: registry read and patch preserve BOM, CRLF, Unicode and exact observed byte hashes
+ok 2 - registry read and patch preserve BOM, CRLF, Unicode and exact observed byte hashes
+  ---
+  duration_ms: 636.545239
+  type: 'test'
+  ...
+# Subtest: partial reads expose only their window and disjoint edits survive length-changing rebases
+ok 3 - partial reads expose only their window and disjoint edits survive length-changing rebases
+  ---
+  duration_ms: 484.711472
+  type: 'test'
+  ...
+# Subtest: reading a window does not authorize a write to unread bytes
+ok 4 - reading a window does not authorize a write to unread bytes
+  ---
+  duration_ms: 176.312713
+  type: 'test'
+  ...
+# Subtest: a changed read dependency in another file refuses the patch until reconciled reread
+ok 5 - a changed read dependency in another file refuses the patch until reconciled reread
+  ---
+  duration_ms: 755.424763
+  type: 'test'
+  ...
+# Subtest: UTF-8 boundary errors and unmatched surrogates cannot create observations or patches
+ok 6 - UTF-8 boundary errors and unmatched surrogates cannot create observations or patches
+  ---
+  duration_ms: 306.573374
+  type: 'test'
+  ...
+# Subtest: a retired scope cannot release queued read content
+ok 7 - a retired scope cannot release queued read content
+  ---
+  duration_ms: 34.326065
+  type: 'test'
+  ...
+# Subtest: a real hard-link alias is refused and publication preserves mixed-case filenames
+ok 8 - a real hard-link alias is refused and publication preserves mixed-case filenames
+  ---
+  duration_ms: 255.60694
+  type: 'test'
+  ...
+# Subtest: a refused publication leaves no changed file and known-unapplied recovery permits a fresh retry
+ok 9 - a refused publication leaves no changed file and known-unapplied recovery permits a fresh retry
+  ---
+  duration_ms: 466.935031
+  type: 'test'
+  ...
+# Subtest: MCP dispatch requires an actual transport scope, not an actor name or a shared anonymous fallback
+ok 10 - MCP dispatch requires an actual transport scope, not an actor name or a shared anonymous fallback
+  ---
+  duration_ms: 160.282968
+  type: 'test'
+  ...
+# Subtest: each registry call returns separate current invocation diagnostics, never durable operation attribution
+ok 11 - each registry call returns separate current invocation diagnostics, never durable operation attribution
+  ---
+  duration_ms: 351.56526
+  type: 'test'
+  ...
+# Subtest: registry owns the invocation capability and retires it after both success and refusal
+ok 12 - registry owns the invocation capability and retires it after both success and refusal
+  ---
+  duration_ms: 316.704957
+  type: 'test'
+  ...
+# Subtest: ending the actual invocation during materialization releases no content or read authority
+ok 13 - ending the actual invocation during materialization releases no content or read authority
+  ---
+  duration_ms: 335.463871
+  type: 'test'
+  ...
+# Subtest: ending the actual write invocation after staging still refuses before atomic replacement
+ok 14 - ending the actual write invocation after staging still refuses before atomic replacement
+  ---
+  duration_ms: 387.474583
+  type: 'test'
+  ...
+# Subtest: ending a call after publication preserves the committed-effect warning
+ok 15 - ending a call after publication preserves the committed-effect warning
+  ---
+  duration_ms: 231.905838
+  type: 'test'
+  ...
+# Subtest: MCP repair projection is bounded, strips unread bytes, and preserves committed-vs-unknown outcomes
+ok 16 - MCP repair projection is bounded, strips unread bytes, and preserves committed-vs-unknown outcomes
+  ---
+  duration_ms: 1.162797
+  type: 'test'
+  ...
+# Subtest: legacy whole-file writes remain explicitly unmediated and invalidate a prior coordinated read
+ok 17 - legacy whole-file writes remain explicitly unmediated and invalidate a prior coordinated read
+  ---
+  duration_ms: 213.277531
+  type: 'test'
+  ...
+# Subtest: whole-file tool writes require a private scope and do not manufacture read observations
+ok 18 - whole-file tool writes require a private scope and do not manufacture read observations
+  ---
+  duration_ms: 371.317481
+  type: 'test'
+  ...
+# Subtest: whole-file tool creation preserves case, creates parents, and treats empty creation as an effect
+ok 19 - whole-file tool creation preserves case, creates parents, and treats empty creation as an effect
+  ---
+  duration_ms: 247.662612
+  type: 'test'
+  ...
+# Subtest: whole-file writes validate dependencies, invalidate observations, and reject lossy text
+ok 20 - whole-file writes validate dependencies, invalidate observations, and reject lossy text
+  ---
+  duration_ms: 761.576437
+  type: 'test'
+  ...
+# Subtest: a valid long filename is not amplified into an invalid creation or replacement stage
+ok 21 - a valid long filename is not amplified into an invalid creation or replacement stage
+  ---
+  duration_ms: 650.688937
+  type: 'test'
+  ...
+# Subtest: creation interrupted after atomic link is recovered before the ordinary hard-link refusal
+ok 22 - creation interrupted after atomic link is recovered before the ordinary hard-link refusal
+  ---
+  duration_ms: 525.283787
+  type: 'test'
+  ...
+# Subtest: atomic creation does not clobber an intervening file and unknown identity preserves both leaves
+ok 23 - atomic creation does not clobber an intervening file and unknown identity preserves both leaves
+  ---
+  duration_ms: 241.591564
+  type: 'test'
+  ...
+# Subtest: same-byte replacement is not recovered as our creation when the staged link is absent
+ok 24 - same-byte replacement is not recovered as our creation when the staged link is absent
+  ---
+  duration_ms: 233.266547
+  type: 'test'
+  ...
+# Subtest: whole-file creation requires durable audit before creating parents or a staged leaf
+ok 25 - whole-file creation requires durable audit before creating parents or a staged leaf
+  ---
+  duration_ms: 273.94726
+  type: 'test'
+  ...
+# Subtest: scope retirement after whole-file replacement reports committed effect instead of an unapplied refusal
+ok 26 - scope retirement after whole-file replacement reports committed effect instead of an unapplied refusal
+  ---
+  duration_ms: 250.041301
+  type: 'test'
+  ...
+# Subtest: real owner-host sessions carry separate private scopes through MCP and revoke them immediately
+ok 27 - real owner-host sessions carry separate private scopes through MCP and revoke them immediately
+  ---
+  duration_ms: 527.341906
+  type: 'test'
+  ...
+1..27
+# tests 27
+# suites 0
+# pass 27
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9202.602295
+----
+exit: 0
+sensors after: SEN1=54 SEN2=59 SEN3=55 load1=0.89

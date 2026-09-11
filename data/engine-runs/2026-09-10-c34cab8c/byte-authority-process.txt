@@ -1,0 +1,81 @@
+engine single-file run 2026-09-10T23:06:48Z
+cwd: <workspace>/engine  HEAD: c34cab8c7845b8c1ef58f0a94fc5693ab6459cdf
+env set explicitly (rule 20): TOOLSENABLED_STATE_ROOT=MC_TEST_STATE_ROOT=<B1 scratch-state/capability> TOOLSENABLED_VAULT_PATH=<B1 scratch-state/vault> TMPDIR=/tmp PYTHONDONTWRITEBYTECODE=1; run-isolated.js gives the child its own isolated root
+command: node tests/run-isolated.js tests/byte-authority-process.test.js   (one file, one process; link 4 not run)
+sensors before: SEN1=54 SEN2=59 SEN3=55 load1=0.67
+----
+TAP version 13
+# Subtest: two actual processes retain disjoint edits, including shifted byte coordinates
+ok 1 - two actual processes retain disjoint edits, including shifted byte coordinates
+  ---
+  duration_ms: 168.372637
+  type: 'test'
+  ...
+(node:278536) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: a real competing process cannot publish while another lifetime transaction remains held
+ok 2 - a real competing process cannot publish while another lifetime transaction remains held
+  ---
+  duration_ms: 244.867462
+  type: 'test'
+  ...
+# Subtest: actual process exit at crash-before releases its OS lock and preserves the publication journal
+ok 3 - actual process exit at crash-before releases its OS lock and preserves the publication journal
+  ---
+  duration_ms: 145.967031
+  type: 'test'
+  ...
+# Subtest: actual process exit at crash-after releases its OS lock and preserves the publication journal
+ok 4 - actual process exit at crash-after releases its OS lock and preserves the publication journal
+  ---
+  duration_ms: 177.966992
+  type: 'test'
+  ...
+# Subtest: real blind writers serialize whole-file publication without creating read receipts
+ok 5 - real blind writers serialize whole-file publication without creating read receipts
+  ---
+  duration_ms: 133.062192
+  type: 'test'
+  ...
+# Subtest: two real blind writers on an absent resource perform one creation then one explicit overwrite
+ok 6 - two real blind writers on an absent resource perform one creation then one explicit overwrite
+  ---
+  duration_ms: 122.967192
+  type: 'test'
+  ...
+# Subtest: real creation process exit at crash-before releases the lifetime lock and recovers only its staged identity
+ok 7 - real creation process exit at crash-before releases the lifetime lock and recovers only its staged identity
+  ---
+  duration_ms: 116.313911
+  type: 'test'
+  ...
+# Subtest: real creation process exit at crash-after-link releases the lifetime lock and recovers only its staged identity
+ok 8 - real creation process exit at crash-after-link releases the lifetime lock and recovers only its staged identity
+  ---
+  duration_ms: 118.252727
+  type: 'test'
+  ...
+# Subtest: real creation process exit at crash-after releases the lifetime lock and recovers only its staged identity
+ok 9 - real creation process exit at crash-after releases the lifetime lock and recovers only its staged identity
+  ---
+  duration_ms: 127.198914
+  type: 'test'
+  ...
+# Subtest: a real crash after staging but before its journal cannot imply publication or authorize a cleanup sweep
+ok 10 - a real crash after staging but before its journal cannot imply publication or authorize a cleanup sweep
+  ---
+  duration_ms: 112.235239
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1470.420005
+----
+exit: 0
+sensors after: SEN1=54 SEN2=59 SEN3=55 load1=0.67

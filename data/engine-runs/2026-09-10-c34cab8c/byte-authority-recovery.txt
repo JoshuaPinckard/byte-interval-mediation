@@ -1,0 +1,69 @@
+engine single-file run 2026-09-10T23:06:47Z
+cwd: <workspace>/engine  HEAD: c34cab8c7845b8c1ef58f0a94fc5693ab6459cdf
+env set explicitly (rule 20): TOOLSENABLED_STATE_ROOT=MC_TEST_STATE_ROOT=<B1 scratch-state/capability> TOOLSENABLED_VAULT_PATH=<B1 scratch-state/vault> TMPDIR=/tmp PYTHONDONTWRITEBYTECODE=1; run-isolated.js gives the child its own isolated root
+command: node tests/run-isolated.js tests/byte-authority-recovery.test.js   (one file, one process; link 4 not run)
+sensors before: SEN1=54 SEN2=59 SEN3=55 load1=0.67
+----
+(node:278476) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# Subtest: failed publication remains prepared and retry automatically records unapplied bytes before a new publication
+ok 1 - failed publication remains prepared and retry automatically records unapplied bytes before a new publication
+  ---
+  duration_ms: 121.167718
+  type: 'test'
+  ...
+# Subtest: publication followed by an outcome failure recovers byte identity and reader invalidation exactly once
+ok 2 - publication followed by an outcome failure recovers byte identity and reader invalidation exactly once
+  ---
+  duration_ms: 94.700164
+  type: 'test'
+  ...
+# Subtest: unexpected recovered bytes remain quarantined while an unrelated scope and resource still work
+ok 3 - unexpected recovered bytes remain quarantined while an unrelated scope and resource still work
+  ---
+  duration_ms: 150.57352
+  type: 'test'
+  ...
+# Subtest: a pending materialized edit to another read dependency is recovered before allowing a target patch
+ok 4 - a pending materialized edit to another read dependency is recovered before allowing a target patch
+  ---
+  duration_ms: 141.977782
+  type: 'test'
+  ...
+# Subtest: missing recorded state refuses before materializing a file
+ok 5 - missing recorded state refuses before materializing a file
+  ---
+  duration_ms: 48.137587
+  type: 'test'
+  ...
+# Subtest: pending operation corruption is refused before recovery can change read projections
+ok 6 - pending operation corruption is refused before recovery can change read projections
+  ---
+  duration_ms: 66.951549
+  type: 'test'
+  ...
+# Subtest: loss of a resource version is corruption, not permission to manufacture a new empty index
+ok 7 - loss of a resource version is corruption, not permission to manufacture a new empty index
+  ---
+  duration_ms: 60.667548
+  type: 'test'
+  ...
+# Subtest: interrupted no-op recovery records an observation with no invented publication effect
+ok 8 - interrupted no-op recovery records an observation with no invented publication effect
+  ---
+  duration_ms: 75.380727
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 765.045497
+----
+exit: 0
+sensors after: SEN1=54 SEN2=59 SEN3=55 load1=0.67
