@@ -1,0 +1,457 @@
+% refs.bib -- verified bibliography for
+%   "Byte-Interval Mediation: Read-Receipt Write Admission for
+%    Concurrent LLM Coding Agents" (Joshua Pinckard)
+% Every entry was checked against its primary source on 2026-09-11;
+% see CITATIONS-VERIFIED.md for the URL used and what was confirmed.
+% Style target: BibTeX + natbib, plainnat.bst.  Several url/doi fields
+% contain underscores, so load \usepackage{url} or \usepackage{hyperref}.
+% Note: plainnat.bst ignores eprint/archivePrefix (kept for other tools);
+% arXiv-only entries therefore also carry the identifier in howpublished.
+
+% ---------------------------------------------------------------------
+% Concurrency control, isolation, leases, recovery
+% ---------------------------------------------------------------------
+
+@article{kung1981optimistic,
+  author    = {H. T. Kung and John T. Robinson},
+  title     = {On Optimistic Methods for Concurrency Control},
+  journal   = {ACM Transactions on Database Systems},
+  volume    = {6},
+  number    = {2},
+  pages     = {213--226},
+  month     = jun,
+  year      = {1981},
+  doi       = {10.1145/319566.319567}
+}
+
+@article{eswaran1976notions,
+  author    = {K. P. Eswaran and J. N. Gray and R. A. Lorie and I. L. Traiger},
+  title     = {The Notions of Consistency and Predicate Locks in a Database System},
+  journal   = {Communications of the ACM},
+  volume    = {19},
+  number    = {11},
+  pages     = {624--633},
+  month     = nov,
+  year      = {1976},
+  doi       = {10.1145/360363.360369}
+}
+
+@inproceedings{berenson1995critique,
+  author    = {Hal Berenson and Phil Bernstein and Jim Gray and Jim Melton and Elizabeth O'Neil and Patrick O'Neil},
+  title     = {A Critique of {ANSI} {SQL} Isolation Levels},
+  booktitle = {Proceedings of the 1995 {ACM} {SIGMOD} International Conference on Management of Data ({SIGMOD} '95)},
+  pages     = {1--10},
+  publisher = {ACM Press},
+  year      = {1995},
+  doi       = {10.1145/223784.223785}
+}
+
+@phdthesis{adya1999weak,
+  author    = {Atul Adya},
+  title     = {Weak Consistency: A Generalized Theory and Optimistic Implementations for Distributed Transactions},
+  school    = {Massachusetts Institute of Technology},
+  month     = mar,
+  year      = {1999},
+  note      = {Also available as MIT technical report MIT-LCS-TR-786},
+  url       = {https://hdl.handle.net/1721.1/149899}
+}
+
+@article{fekete2005making,
+  author    = {Alan Fekete and Dimitrios Liarokapis and Elizabeth O'Neil and Patrick O'Neil and Dennis Shasha},
+  title     = {Making Snapshot Isolation Serializable},
+  journal   = {ACM Transactions on Database Systems},
+  volume    = {30},
+  number    = {2},
+  pages     = {492--528},
+  month     = jun,
+  year      = {2005},
+  doi       = {10.1145/1071610.1071615}
+}
+
+@inproceedings{gray1989leases,
+  author    = {C. Gray and D. Cheriton},
+  title     = {Leases: An Efficient Fault-Tolerant Mechanism for Distributed File Cache Consistency},
+  booktitle = {Proceedings of the Twelfth {ACM} Symposium on Operating Systems Principles ({SOSP} '89)},
+  pages     = {202--210},
+  publisher = {ACM},
+  year      = {1989},
+  doi       = {10.1145/74850.74870}
+}
+
+@article{mohan1992aries,
+  author    = {C. Mohan and Don Haderle and Bruce Lindsay and Hamid Pirahesh and Peter Schwarz},
+  title     = {{ARIES}: A Transaction Recovery Method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging},
+  journal   = {ACM Transactions on Database Systems},
+  volume    = {17},
+  number    = {1},
+  pages     = {94--162},
+  month     = mar,
+  year      = {1992},
+  doi       = {10.1145/128765.128770}
+}
+
+@inproceedings{pillai2014allfs,
+  author    = {Thanumalayan Sankaranarayana Pillai and Vijay Chidambaram and Ramnatthan Alagappan and Samer Al-Kiswany and Andrea C. Arpaci-Dusseau and Remzi H. Arpaci-Dusseau},
+  title     = {All File Systems Are Not Created Equal: On the Complexity of Crafting Crash-Consistent Applications},
+  booktitle = {11th {USENIX} Symposium on Operating Systems Design and Implementation ({OSDI} 14)},
+  pages     = {433--448},
+  address   = {Broomfield, CO},
+  publisher = {USENIX Association},
+  month     = oct,
+  year      = {2014},
+  isbn      = {978-1-931971-16-4},
+  url       = {https://www.usenix.org/conference/osdi14/technical-sessions/presentation/pillai}
+}
+
+% ---------------------------------------------------------------------
+% HTTP conditional requests and the lost-update problem
+% ---------------------------------------------------------------------
+
+@misc{rfc9110,
+  author       = {R. Fielding and M. Nottingham and J. Reschke},
+  title        = {{HTTP} Semantics},
+  howpublished = {RFC 9110, RFC Editor, \url{https://www.rfc-editor.org/info/rfc9110}},
+  series       = {Request for Comments},
+  number       = {9110},
+  doi          = {10.17487/RFC9110},
+  month        = jun,
+  year         = {2022},
+  note         = {Internet Standard, STD 97}
+}
+
+@misc{rfc6585,
+  author       = {M. Nottingham and R. Fielding},
+  title        = {Additional {HTTP} Status Codes},
+  howpublished = {RFC 6585, RFC Editor, \url{https://www.rfc-editor.org/info/rfc6585}},
+  series       = {Request for Comments},
+  number       = {6585},
+  doi          = {10.17487/RFC6585},
+  month        = apr,
+  year         = {2012}
+}
+
+@misc{w3c1999lostupdate,
+  author       = {Henrik Frystyk Nielsen and Daniel LaLiberte},
+  title        = {Editing the {Web}: Detecting the Lost Update Problem Using Unreserved Checkout},
+  howpublished = {W3C Note},
+  month        = may,
+  year         = {1999},
+  url          = {https://www.w3.org/1999/04/Editing/},
+  note         = {Dated 10 May 1999; this version: \url{https://www.w3.org/1999/04/Editing/01}. Accessed 2026-09-11}
+}
+
+% ---------------------------------------------------------------------
+% Collaborative editing: OT and CRDTs
+% ---------------------------------------------------------------------
+
+@inproceedings{ellis1989concurrency,
+  author    = {C. A. Ellis and S. J. Gibbs},
+  title     = {Concurrency Control in Groupware Systems},
+  booktitle = {Proceedings of the 1989 {ACM} {SIGMOD} International Conference on Management of Data ({SIGMOD} '89)},
+  pages     = {399--407},
+  publisher = {ACM Press},
+  year      = {1989},
+  doi       = {10.1145/67544.66963}
+}
+
+@article{sun1998achieving,
+  author    = {Chengzheng Sun and Xiaohua Jia and Yanchun Zhang and Yun Yang and David Chen},
+  title     = {Achieving Convergence, Causality Preservation, and Intention Preservation in Real-Time Cooperative Editing Systems},
+  journal   = {ACM Transactions on Computer-Human Interaction},
+  volume    = {5},
+  number    = {1},
+  pages     = {63--108},
+  month     = mar,
+  year      = {1998},
+  doi       = {10.1145/274444.274447}
+}
+
+@inproceedings{shapiro2011crdt,
+  author    = {Marc Shapiro and Nuno Pregui{\c{c}}a and Carlos Baquero and Marek Zawirski},
+  title     = {Conflict-Free Replicated Data Types},
+  booktitle = {Stabilization, Safety, and Security of Distributed Systems ({SSS} 2011)},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {6976},
+  pages     = {386--400},
+  publisher = {Springer Berlin Heidelberg},
+  year      = {2011},
+  doi       = {10.1007/978-3-642-24550-3_29}
+}
+
+@article{kleppmann2017json,
+  author    = {Martin Kleppmann and Alastair R. Beresford},
+  title     = {A Conflict-Free Replicated {JSON} Datatype},
+  journal   = {IEEE Transactions on Parallel and Distributed Systems},
+  volume    = {28},
+  number    = {10},
+  pages     = {2733--2746},
+  month     = oct,
+  year      = {2017},
+  doi       = {10.1109/TPDS.2017.2697382}
+}
+
+% ---------------------------------------------------------------------
+% Software merging and collaboration conflicts
+% ---------------------------------------------------------------------
+
+@inproceedings{khanna2007diff3,
+  author    = {Sanjeev Khanna and Keshav Kunal and Benjamin C. Pierce},
+  title     = {A Formal Investigation of {Diff3}},
+  booktitle = {{FSTTCS} 2007: Foundations of Software Technology and Theoretical Computer Science},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {4855},
+  pages     = {485--496},
+  publisher = {Springer Berlin Heidelberg},
+  year      = {2007},
+  doi       = {10.1007/978-3-540-77050-3_40}
+}
+
+@article{mens2002merging,
+  author    = {T. Mens},
+  title     = {A State-of-the-Art Survey on Software Merging},
+  journal   = {IEEE Transactions on Software Engineering},
+  volume    = {28},
+  number    = {5},
+  pages     = {449--462},
+  month     = may,
+  year      = {2002},
+  doi       = {10.1109/TSE.2002.1000449}
+}
+
+@inproceedings{brun2011proactive,
+  author    = {Yuriy Brun and Reid Holmes and Michael D. Ernst and David Notkin},
+  title     = {Proactive Detection of Collaboration Conflicts},
+  booktitle = {Proceedings of the 19th {ACM} {SIGSOFT} Symposium and the 13th European Conference on Foundations of Software Engineering ({ESEC/FSE} '11)},
+  pages     = {168--178},
+  publisher = {ACM},
+  year      = {2011},
+  doi       = {10.1145/2025113.2025139}
+}
+
+@article{sousa2018verified,
+  author    = {Marcelo Sousa and Isil Dillig and Shuvendu K. Lahiri},
+  title     = {Verified Three-Way Program Merge},
+  journal   = {Proceedings of the ACM on Programming Languages},
+  volume    = {2},
+  number    = {OOPSLA},
+  pages     = {165:1--165:29},
+  year      = {2018},
+  doi       = {10.1145/3276535}
+}
+
+@article{zimmermann2005mining,
+  author    = {Thomas Zimmermann and Peter Wei{\ss}gerber and Stephan Diehl and Andreas Zeller},
+  title     = {Mining Version Histories to Guide Software Changes},
+  journal   = {IEEE Transactions on Software Engineering},
+  volume    = {31},
+  number    = {6},
+  pages     = {429--445},
+  month     = jun,
+  year      = {2005},
+  doi       = {10.1109/TSE.2005.72}
+}
+
+% ---------------------------------------------------------------------
+% LLM coding agents and multi-agent LLM systems
+% ---------------------------------------------------------------------
+
+@inproceedings{jimenez2024swebench,
+  author        = {Carlos E. Jimenez and John Yang and Alexander Wettig and Shunyu Yao and Kexin Pei and Ofir Press and Karthik Narasimhan},
+  title         = {{SWE-bench}: Can Language Models Resolve Real-World {GitHub} Issues?},
+  booktitle     = {International Conference on Learning Representations ({ICLR})},
+  pages         = {54107--54157},
+  year          = {2024},
+  url           = {https://proceedings.iclr.cc/paper_files/paper/2024/hash/edac78c3e300629acfe6cbe9ca88fb84-Abstract-Conference.html},
+  eprint        = {2310.06770},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{yang2024sweagent,
+  author        = {John Yang and Carlos E. Jimenez and Alexander Wettig and Kilian Lieret and Shunyu Yao and Karthik Narasimhan and Ofir Press},
+  title         = {{SWE-agent}: Agent-Computer Interfaces Enable Automated Software Engineering},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  volume        = {37},
+  pages         = {50528--50652},
+  year          = {2024},
+  doi           = {10.52202/079017-1601},
+  eprint        = {2405.15793},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{wang2025openhands,
+  author        = {Xingyao Wang and Boxuan Li and Yufan Song and Frank F. Xu and Xiangru Tang and Mingchen Zhuge and Jiayi Pan and Yueqi Song and Bowen Li and Jaskirat Singh and Hoang H. Tran and Fuqiang Li and Ren Ma and Mingzhang Zheng and Bill Qian and Yanjun Shao and Niklas Muennighoff and Yizhe Zhang and Binyuan Hui and Junyang Lin and Robert Brennan and Hao Peng and Heng Ji and Graham Neubig},
+  title         = {{OpenHands}: An Open Platform for {AI} Software Developers as Generalist Agents},
+  booktitle     = {International Conference on Learning Representations ({ICLR})},
+  pages         = {65882--65919},
+  year          = {2025},
+  url           = {https://proceedings.iclr.cc/paper_files/paper/2025/hash/a4b6ad6b48850c0c331d1259fc66a69c-Abstract-Conference.html},
+  eprint        = {2407.16741},
+  archivePrefix = {arXiv}
+}
+
+@misc{xia2024agentless,
+  author        = {Chunqiu Steven Xia and Yinlin Deng and Soren Dunn and Lingming Zhang},
+  title         = {Agentless: Demystifying {LLM}-based Software Engineering Agents},
+  howpublished  = {arXiv preprint arXiv:2407.01489},
+  year          = {2024},
+  url           = {https://arxiv.org/abs/2407.01489},
+  eprint        = {2407.01489},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.SE}
+}
+
+@inproceedings{zhang2024autocoderover,
+  author        = {Yuntong Zhang and Haifeng Ruan and Zhiyu Fan and Abhik Roychoudhury},
+  title         = {{AutoCodeRover}: Autonomous Program Improvement},
+  booktitle     = {Proceedings of the 33rd {ACM} {SIGSOFT} International Symposium on Software Testing and Analysis ({ISSTA} '24)},
+  pages         = {1592--1604},
+  publisher     = {ACM},
+  year          = {2024},
+  doi           = {10.1145/3650212.3680384},
+  eprint        = {2404.05427},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{hong2024metagpt,
+  author        = {Sirui Hong and Mingchen Zhuge and Jonathan Chen and Xiawu Zheng and Yuheng Cheng and Ceyao Zhang and Jinlin Wang and Zili Wang and Steven Ka Shing Yau and Zijuan Lin and Liyang Zhou and Chenyu Ran and Lingfeng Xiao and Chenglin Wu and J{\"u}rgen Schmidhuber},
+  title         = {{MetaGPT}: Meta Programming for A Multi-Agent Collaborative Framework},
+  booktitle     = {International Conference on Learning Representations ({ICLR})},
+  pages         = {23247--23275},
+  year          = {2024},
+  url           = {https://proceedings.iclr.cc/paper_files/paper/2024/hash/6507b115562bb0a305f1958ccc87355a-Abstract-Conference.html},
+  eprint        = {2308.00352},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{qian2024chatdev,
+  author        = {Chen Qian and Wei Liu and Hongzhang Liu and Nuo Chen and Yufan Dang and Jiahao Li and Cheng Yang and Weize Chen and Yusheng Su and Xin Cong and Juyuan Xu and Dahai Li and Zhiyuan Liu and Maosong Sun},
+  title         = {{ChatDev}: Communicative Agents for Software Development},
+  booktitle     = {Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages         = {15174--15186},
+  address       = {Bangkok, Thailand},
+  publisher     = {Association for Computational Linguistics},
+  year          = {2024},
+  doi           = {10.18653/v1/2024.acl-long.810},
+  eprint        = {2307.07924},
+  archivePrefix = {arXiv}
+}
+
+@misc{wu2023autogen,
+  author        = {Qingyun Wu and Gagan Bansal and Jieyu Zhang and Yiran Wu and Beibin Li and Erkang Zhu and Li Jiang and Xiaoyun Zhang and Shaokun Zhang and Jiale Liu and Ahmed Hassan Awadallah and Ryen W. White and Doug Burger and Chi Wang},
+  title         = {{AutoGen}: Enabling Next-Gen {LLM} Applications via Multi-Agent Conversation},
+  howpublished  = {arXiv preprint arXiv:2308.08155},
+  year          = {2023},
+  url           = {https://arxiv.org/abs/2308.08155},
+  eprint        = {2308.08155},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI}
+}
+
+@misc{cemri2025multiagent,
+  author        = {Mert Cemri and Melissa Z. Pan and Shuyi Yang and Lakshya A. Agrawal and Bhavya Chopra and Rishabh Tiwari and Kurt Keutzer and Aditya Parameswaran and Dan Klein and Kannan Ramchandran and Matei Zaharia and Joseph E. Gonzalez and Ion Stoica},
+  title         = {Why Do Multi-Agent {LLM} Systems Fail?},
+  howpublished  = {arXiv preprint arXiv:2503.13657},
+  year          = {2025},
+  url           = {https://arxiv.org/abs/2503.13657},
+  eprint        = {2503.13657},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI}
+}
+
+% Optional additions: recent work on coordinating multiple LLM coding
+% agents over one shared codebase (arXiv abs pages fetched 2026-09-11).
+
+@misc{liu2026storm,
+  author        = {Mengyang Liu and Taozhi Chen and Zhenhua Xu and Xue Jiang and Yihong Dong},
+  title         = {Multi-agent Collaboration with State Management},
+  howpublished  = {arXiv preprint arXiv:2605.20563},
+  year          = {2026},
+  url           = {https://arxiv.org/abs/2605.20563},
+  eprint        = {2605.20563},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.MA}
+}
+
+@misc{khatua2026cooperbench,
+  author        = {Arpandeep Khatua and Hao Zhu and Peter Tran and Arya Prabhudesai and Frederic Sadrieh and Johann K. Lieberwirth and Xinkai Yu and Yicheng Fu and Michael J. Ryan and Jiaxin Pei and Diyi Yang},
+  title         = {{CooperBench}: Why Coding Agents Cannot be Your Teammates Yet},
+  howpublished  = {arXiv preprint arXiv:2601.13295},
+  year          = {2026},
+  url           = {https://arxiv.org/abs/2601.13295},
+  eprint        = {2601.13295},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG}
+}
+
+@misc{lyu2026coagent,
+  author        = {Hongtao Lyu and Dingyan Zhang and Mingyu Wu and Xingda Wei and Haibo Chen},
+  title         = {{CoAgent}: Concurrency Control for Multi-Agent Systems},
+  howpublished  = {arXiv preprint arXiv:2606.15376},
+  year          = {2026},
+  url           = {https://arxiv.org/abs/2606.15376},
+  eprint        = {2606.15376},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.DC}
+}
+
+% ---------------------------------------------------------------------
+% Platform specifications and documentation
+% ---------------------------------------------------------------------
+
+@misc{posix2024rename,
+  author       = {{The IEEE and The Open Group}},
+  title        = {{rename, renameat} --- rename file},
+  howpublished = {The Open Group Base Specifications Issue 8, {IEEE} Std 1003.1-2024},
+  year         = {2024},
+  url          = {https://pubs.opengroup.org/onlinepubs/9799919799/functions/rename.html},
+  note         = {Accessed 2026-09-11}
+}
+
+@misc{posix2024link,
+  author       = {{The IEEE and The Open Group}},
+  title        = {{link, linkat} --- hard link one file to another file},
+  howpublished = {The Open Group Base Specifications Issue 8, {IEEE} Std 1003.1-2024},
+  year         = {2024},
+  url          = {https://pubs.opengroup.org/onlinepubs/9799919799/functions/link.html},
+  note         = {Accessed 2026-09-11}
+}
+
+@misc{sqlite-locking,
+  author       = {{SQLite}},
+  title        = {File Locking And Concurrency In {SQLite} Version 3},
+  howpublished = {SQLite documentation},
+  year         = {2025},
+  url          = {https://www.sqlite.org/lockingv3.html},
+  note         = {Page last updated 2025-05-31. Accessed 2026-09-11}
+}
+
+@misc{sqlite-transaction,
+  author       = {{SQLite}},
+  title        = {Transaction},
+  howpublished = {SQLite documentation},
+  year         = {2026},
+  url          = {https://www.sqlite.org/lang_transaction.html},
+  note         = {Page last updated 2026-02-18. Accessed 2026-09-11}
+}
+
+@misc{nodejs-sqlite,
+  author       = {{Node.js}},
+  title        = {{SQLite} (\texttt{node:sqlite})},
+  howpublished = {Node.js v22.23.2 Documentation},
+  year         = {2026},
+  url          = {https://nodejs.org/docs/latest-v22.x/api/sqlite.html},
+  note         = {Added in v22.5.0; no longer behind the \texttt{-{}-experimental-sqlite} flag since v22.13.0 (still marked Stability 1.1, active development). Accessed 2026-09-11}
+}
+
+% ---------------------------------------------------------------------
+% Software
+% ---------------------------------------------------------------------
+
+@misc{pinckard2026blastradius,
+  author       = {Joshua Pinckard},
+  title        = {{Blast-Radius}},
+  howpublished = {GitHub repository \texttt{JoshuaPinckard/co-read}},
+  year         = {2026},
+  url          = {https://github.com/JoshuaPinckard/co-read},
+  note         = {Software, Apache License 2.0. Accessed 2026-09-11}
+}

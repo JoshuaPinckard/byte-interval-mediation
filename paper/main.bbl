@@ -1,0 +1,334 @@
+\begin{thebibliography}{38}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Adya(1999)]{adya1999weak}
+Atul Adya.
+\newblock \emph{Weak Consistency: A Generalized Theory and Optimistic
+  Implementations for Distributed Transactions}.
+\newblock PhD thesis, Massachusetts Institute of Technology, March 1999.
+\newblock URL \url{https://hdl.handle.net/1721.1/149899}.
+\newblock Also available as MIT technical report MIT-LCS-TR-786.
+
+\bibitem[Berenson et~al.(1995)Berenson, Bernstein, Gray, Melton, O'Neil, and
+  O'Neil]{berenson1995critique}
+Hal Berenson, Phil Bernstein, Jim Gray, Jim Melton, Elizabeth O'Neil, and
+  Patrick O'Neil.
+\newblock A critique of {ANSI} {SQL} isolation levels.
+\newblock In \emph{Proceedings of the 1995 {ACM} {SIGMOD} International
+  Conference on Management of Data ({SIGMOD} '95)}, pages 1--10. ACM Press,
+  1995.
+\newblock \doi{10.1145/223784.223785}.
+
+\bibitem[Brun et~al.(2011)Brun, Holmes, Ernst, and Notkin]{brun2011proactive}
+Yuriy Brun, Reid Holmes, Michael~D. Ernst, and David Notkin.
+\newblock Proactive detection of collaboration conflicts.
+\newblock In \emph{Proceedings of the 19th {ACM} {SIGSOFT} Symposium and the
+  13th European Conference on Foundations of Software Engineering ({ESEC/FSE}
+  '11)}, pages 168--178. ACM, 2011.
+\newblock \doi{10.1145/2025113.2025139}.
+
+\bibitem[Cemri et~al.(2025)Cemri, Pan, Yang, Agrawal, Chopra, Tiwari, Keutzer,
+  Parameswaran, Klein, Ramchandran, Zaharia, Gonzalez, and
+  Stoica]{cemri2025multiagent}
+Mert Cemri, Melissa~Z. Pan, Shuyi Yang, Lakshya~A. Agrawal, Bhavya Chopra,
+  Rishabh Tiwari, Kurt Keutzer, Aditya Parameswaran, Dan Klein, Kannan
+  Ramchandran, Matei Zaharia, Joseph~E. Gonzalez, and Ion Stoica.
+\newblock Why do multi-agent {LLM} systems fail?
+\newblock arXiv preprint arXiv:2503.13657, 2025.
+\newblock URL \url{https://arxiv.org/abs/2503.13657}.
+
+\bibitem[Ellis and Gibbs(1989)]{ellis1989concurrency}
+C.~A. Ellis and S.~J. Gibbs.
+\newblock Concurrency control in groupware systems.
+\newblock In \emph{Proceedings of the 1989 {ACM} {SIGMOD} International
+  Conference on Management of Data ({SIGMOD} '89)}, pages 399--407. ACM Press,
+  1989.
+\newblock \doi{10.1145/67544.66963}.
+
+\bibitem[Eswaran et~al.(1976)Eswaran, Gray, Lorie, and
+  Traiger]{eswaran1976notions}
+K.~P. Eswaran, J.~N. Gray, R.~A. Lorie, and I.~L. Traiger.
+\newblock The notions of consistency and predicate locks in a database system.
+\newblock \emph{Communications of the ACM}, 19\penalty0 (11):\penalty0
+  624--633, November 1976.
+\newblock \doi{10.1145/360363.360369}.
+
+\bibitem[Fekete et~al.(2005)Fekete, Liarokapis, O'Neil, O'Neil, and
+  Shasha]{fekete2005making}
+Alan Fekete, Dimitrios Liarokapis, Elizabeth O'Neil, Patrick O'Neil, and Dennis
+  Shasha.
+\newblock Making snapshot isolation serializable.
+\newblock \emph{ACM Transactions on Database Systems}, 30\penalty0
+  (2):\penalty0 492--528, June 2005.
+\newblock \doi{10.1145/1071610.1071615}.
+
+\bibitem[Fielding et~al.(2022)Fielding, Nottingham, and Reschke]{rfc9110}
+R.~Fielding, M.~Nottingham, and J.~Reschke.
+\newblock {HTTP} semantics.
+\newblock RFC 9110, RFC Editor, \url{https://www.rfc-editor.org/info/rfc9110},
+  June 2022.
+\newblock Internet Standard, STD 97.
+
+\bibitem[Gray and Cheriton(1989)]{gray1989leases}
+C.~Gray and D.~Cheriton.
+\newblock Leases: An efficient fault-tolerant mechanism for distributed file
+  cache consistency.
+\newblock In \emph{Proceedings of the Twelfth {ACM} Symposium on Operating
+  Systems Principles ({SOSP} '89)}, pages 202--210. ACM, 1989.
+\newblock \doi{10.1145/74850.74870}.
+
+\bibitem[Hong et~al.(2024)Hong, Zhuge, Chen, Zheng, Cheng, Zhang, Wang, Wang,
+  Yau, Lin, Zhou, Ran, Xiao, Wu, and Schmidhuber]{hong2024metagpt}
+Sirui Hong, Mingchen Zhuge, Jonathan Chen, Xiawu Zheng, Yuheng Cheng, Ceyao
+  Zhang, Jinlin Wang, Zili Wang, Steven Ka~Shing Yau, Zijuan Lin, Liyang Zhou,
+  Chenyu Ran, Lingfeng Xiao, Chenglin Wu, and J{\"u}rgen Schmidhuber.
+\newblock {MetaGPT}: Meta programming for a multi-agent collaborative
+  framework.
+\newblock In \emph{International Conference on Learning Representations
+  ({ICLR})}, pages 23247--23275, 2024.
+\newblock URL
+  \url{https://proceedings.iclr.cc/paper_files/paper/2024/hash/6507b115562bb0a305f1958ccc87355a-Abstract-Conference.html}.
+
+\bibitem[Jimenez et~al.(2024)Jimenez, Yang, Wettig, Yao, Pei, Press, and
+  Narasimhan]{jimenez2024swebench}
+Carlos~E. Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir
+  Press, and Karthik Narasimhan.
+\newblock {SWE-bench}: Can language models resolve real-world {GitHub} issues?
+\newblock In \emph{International Conference on Learning Representations
+  ({ICLR})}, pages 54107--54157, 2024.
+\newblock URL
+  \url{https://proceedings.iclr.cc/paper_files/paper/2024/hash/edac78c3e300629acfe6cbe9ca88fb84-Abstract-Conference.html}.
+
+\bibitem[Khanna et~al.(2007)Khanna, Kunal, and Pierce]{khanna2007diff3}
+Sanjeev Khanna, Keshav Kunal, and Benjamin~C. Pierce.
+\newblock A formal investigation of {Diff3}.
+\newblock In \emph{{FSTTCS} 2007: Foundations of Software Technology and
+  Theoretical Computer Science}, volume 4855 of \emph{Lecture Notes in Computer
+  Science}, pages 485--496. Springer Berlin Heidelberg, 2007.
+\newblock \doi{10.1007/978-3-540-77050-3_40}.
+
+\bibitem[Khatua et~al.(2026)Khatua, Zhu, Tran, Prabhudesai, Sadrieh,
+  Lieberwirth, Yu, Fu, Ryan, Pei, and Yang]{khatua2026cooperbench}
+Arpandeep Khatua, Hao Zhu, Peter Tran, Arya Prabhudesai, Frederic Sadrieh,
+  Johann~K. Lieberwirth, Xinkai Yu, Yicheng Fu, Michael~J. Ryan, Jiaxin Pei,
+  and Diyi Yang.
+\newblock {CooperBench}: Why coding agents cannot be your teammates yet.
+\newblock arXiv preprint arXiv:2601.13295, 2026.
+\newblock URL \url{https://arxiv.org/abs/2601.13295}.
+
+\bibitem[Kleppmann and Beresford(2017)]{kleppmann2017json}
+Martin Kleppmann and Alastair~R. Beresford.
+\newblock A conflict-free replicated {JSON} datatype.
+\newblock \emph{IEEE Transactions on Parallel and Distributed Systems},
+  28\penalty0 (10):\penalty0 2733--2746, October 2017.
+\newblock \doi{10.1109/TPDS.2017.2697382}.
+
+\bibitem[Kung and Robinson(1981)]{kung1981optimistic}
+H.~T. Kung and John~T. Robinson.
+\newblock On optimistic methods for concurrency control.
+\newblock \emph{ACM Transactions on Database Systems}, 6\penalty0 (2):\penalty0
+  213--226, June 1981.
+\newblock \doi{10.1145/319566.319567}.
+
+\bibitem[Liu et~al.(2026)Liu, Chen, Xu, Jiang, and Dong]{liu2026storm}
+Mengyang Liu, Taozhi Chen, Zhenhua Xu, Xue Jiang, and Yihong Dong.
+\newblock Multi-agent collaboration with state management.
+\newblock arXiv preprint arXiv:2605.20563, 2026.
+\newblock URL \url{https://arxiv.org/abs/2605.20563}.
+
+\bibitem[Lyu et~al.(2026)Lyu, Zhang, Wu, Wei, and Chen]{lyu2026coagent}
+Hongtao Lyu, Dingyan Zhang, Mingyu Wu, Xingda Wei, and Haibo Chen.
+\newblock {CoAgent}: Concurrency control for multi-agent systems.
+\newblock arXiv preprint arXiv:2606.15376, 2026.
+\newblock URL \url{https://arxiv.org/abs/2606.15376}.
+
+\bibitem[Mens(2002)]{mens2002merging}
+T.~Mens.
+\newblock A state-of-the-art survey on software merging.
+\newblock \emph{IEEE Transactions on Software Engineering}, 28\penalty0
+  (5):\penalty0 449--462, May 2002.
+\newblock \doi{10.1109/TSE.2002.1000449}.
+
+\bibitem[Mohan et~al.(1992)Mohan, Haderle, Lindsay, Pirahesh, and
+  Schwarz]{mohan1992aries}
+C.~Mohan, Don Haderle, Bruce Lindsay, Hamid Pirahesh, and Peter Schwarz.
+\newblock {ARIES}: A transaction recovery method supporting fine-granularity
+  locking and partial rollbacks using write-ahead logging.
+\newblock \emph{ACM Transactions on Database Systems}, 17\penalty0
+  (1):\penalty0 94--162, March 1992.
+\newblock \doi{10.1145/128765.128770}.
+
+\bibitem[Nielsen and LaLiberte(1999)]{w3c1999lostupdate}
+Henrik~Frystyk Nielsen and Daniel LaLiberte.
+\newblock Editing the {Web}: Detecting the lost update problem using unreserved
+  checkout.
+\newblock W3C Note, May 1999.
+\newblock URL \url{https://www.w3.org/1999/04/Editing/}.
+\newblock Dated 10 May 1999; this version:
+  \url{https://www.w3.org/1999/04/Editing/01}. Accessed 2026-09-11.
+
+\bibitem[{Node.js}(2026)]{nodejs-sqlite}
+{Node.js}.
+\newblock {SQLite} (\texttt{node:sqlite}).
+\newblock Node.js v22.23.2 Documentation, 2026.
+\newblock URL \url{https://nodejs.org/docs/latest-v22.x/api/sqlite.html}.
+\newblock Added in v22.5.0; no longer behind the
+  \texttt{-{}-experimental-sqlite} flag since v22.13.0 (still marked Stability
+  1.1, active development). Accessed 2026-09-11.
+
+\bibitem[Nottingham and Fielding(2012)]{rfc6585}
+M.~Nottingham and R.~Fielding.
+\newblock Additional {HTTP} status codes.
+\newblock RFC 6585, RFC Editor, \url{https://www.rfc-editor.org/info/rfc6585},
+  April 2012.
+
+\bibitem[Pillai et~al.(2014)Pillai, Chidambaram, Alagappan, Al-Kiswany,
+  Arpaci-Dusseau, and Arpaci-Dusseau]{pillai2014allfs}
+Thanumalayan~Sankaranarayana Pillai, Vijay Chidambaram, Ramnatthan Alagappan,
+  Samer Al-Kiswany, Andrea~C. Arpaci-Dusseau, and Remzi~H. Arpaci-Dusseau.
+\newblock All file systems are not created equal: On the complexity of crafting
+  crash-consistent applications.
+\newblock In \emph{11th {USENIX} Symposium on Operating Systems Design and
+  Implementation ({OSDI} 14)}, pages 433--448, Broomfield, CO, October 2014.
+  USENIX Association.
+\newblock ISBN 978-1-931971-16-4.
+\newblock URL
+  \url{https://www.usenix.org/conference/osdi14/technical-sessions/presentation/pillai}.
+
+\bibitem[Pinckard(2026)]{pinckard2026blastradius}
+Joshua Pinckard.
+\newblock {Blast-Radius}.
+\newblock GitHub repository \texttt{JoshuaPinckard/co-read}, 2026.
+\newblock URL \url{https://github.com/JoshuaPinckard/co-read}.
+\newblock Software, Apache License 2.0. Accessed 2026-09-11.
+
+\bibitem[Qian et~al.(2024)Qian, Liu, Liu, Chen, Dang, Li, Yang, Chen, Su, Cong,
+  Xu, Li, Liu, and Sun]{qian2024chatdev}
+Chen Qian, Wei Liu, Hongzhang Liu, Nuo Chen, Yufan Dang, Jiahao Li, Cheng Yang,
+  Weize Chen, Yusheng Su, Xin Cong, Juyuan Xu, Dahai Li, Zhiyuan Liu, and
+  Maosong Sun.
+\newblock {ChatDev}: Communicative agents for software development.
+\newblock In \emph{Proceedings of the 62nd Annual Meeting of the Association
+  for Computational Linguistics (Volume 1: Long Papers)}, pages 15174--15186,
+  Bangkok, Thailand, 2024. Association for Computational Linguistics.
+\newblock \doi{10.18653/v1/2024.acl-long.810}.
+
+\bibitem[Shapiro et~al.(2011)Shapiro, Pregui{\c{c}}a, Baquero, and
+  Zawirski]{shapiro2011crdt}
+Marc Shapiro, Nuno Pregui{\c{c}}a, Carlos Baquero, and Marek Zawirski.
+\newblock Conflict-free replicated data types.
+\newblock In \emph{Stabilization, Safety, and Security of Distributed Systems
+  ({SSS} 2011)}, volume 6976 of \emph{Lecture Notes in Computer Science}, pages
+  386--400. Springer Berlin Heidelberg, 2011.
+\newblock \doi{10.1007/978-3-642-24550-3_29}.
+
+\bibitem[Sousa et~al.(2018)Sousa, Dillig, and Lahiri]{sousa2018verified}
+Marcelo Sousa, Isil Dillig, and Shuvendu~K. Lahiri.
+\newblock Verified three-way program merge.
+\newblock \emph{Proceedings of the ACM on Programming Languages}, 2\penalty0
+  (OOPSLA):\penalty0 165:1--165:29, 2018.
+\newblock \doi{10.1145/3276535}.
+
+\bibitem[{SQLite}(2025)]{sqlite-locking}
+{SQLite}.
+\newblock File locking and concurrency in {SQLite} version 3.
+\newblock SQLite documentation, 2025.
+\newblock URL \url{https://www.sqlite.org/lockingv3.html}.
+\newblock Page last updated 2025-05-31. Accessed 2026-09-11.
+
+\bibitem[{SQLite}(2026)]{sqlite-transaction}
+{SQLite}.
+\newblock Transaction.
+\newblock SQLite documentation, 2026.
+\newblock URL \url{https://www.sqlite.org/lang_transaction.html}.
+\newblock Page last updated 2026-02-18. Accessed 2026-09-11.
+
+\bibitem[Sun et~al.(1998)Sun, Jia, Zhang, Yang, and Chen]{sun1998achieving}
+Chengzheng Sun, Xiaohua Jia, Yanchun Zhang, Yun Yang, and David Chen.
+\newblock Achieving convergence, causality preservation, and intention
+  preservation in real-time cooperative editing systems.
+\newblock \emph{ACM Transactions on Computer-Human Interaction}, 5\penalty0
+  (1):\penalty0 63--108, March 1998.
+\newblock \doi{10.1145/274444.274447}.
+
+\bibitem[{The IEEE and The Open Group}(2024{\natexlab{a}})]{posix2024link}
+{The IEEE and The Open Group}.
+\newblock {link, linkat} --- hard link one file to another file.
+\newblock The Open Group Base Specifications Issue 8, {IEEE} Std 1003.1-2024,
+  2024{\natexlab{a}}.
+\newblock URL
+  \url{https://pubs.opengroup.org/onlinepubs/9799919799/functions/link.html}.
+\newblock Accessed 2026-09-11.
+
+\bibitem[{The IEEE and The Open Group}(2024{\natexlab{b}})]{posix2024rename}
+{The IEEE and The Open Group}.
+\newblock {rename, renameat} --- rename file.
+\newblock The Open Group Base Specifications Issue 8, {IEEE} Std 1003.1-2024,
+  2024{\natexlab{b}}.
+\newblock URL
+  \url{https://pubs.opengroup.org/onlinepubs/9799919799/functions/rename.html}.
+\newblock Accessed 2026-09-11.
+
+\bibitem[Wang et~al.(2025)Wang, Li, Song, Xu, Tang, Zhuge, Pan, Song, Li,
+  Singh, Tran, Li, Ma, Zheng, Qian, Shao, Muennighoff, Zhang, Hui, Lin,
+  Brennan, Peng, Ji, and Neubig]{wang2025openhands}
+Xingyao Wang, Boxuan Li, Yufan Song, Frank~F. Xu, Xiangru Tang, Mingchen Zhuge,
+  Jiayi Pan, Yueqi Song, Bowen Li, Jaskirat Singh, Hoang~H. Tran, Fuqiang Li,
+  Ren Ma, Mingzhang Zheng, Bill Qian, Yanjun Shao, Niklas Muennighoff, Yizhe
+  Zhang, Binyuan Hui, Junyang Lin, Robert Brennan, Hao Peng, Heng Ji, and
+  Graham Neubig.
+\newblock {OpenHands}: An open platform for {AI} software developers as
+  generalist agents.
+\newblock In \emph{International Conference on Learning Representations
+  ({ICLR})}, pages 65882--65919, 2025.
+\newblock URL
+  \url{https://proceedings.iclr.cc/paper_files/paper/2025/hash/a4b6ad6b48850c0c331d1259fc66a69c-Abstract-Conference.html}.
+
+\bibitem[Wu et~al.(2023)Wu, Bansal, Zhang, Wu, Li, Zhu, Jiang, Zhang, Zhang,
+  Liu, Awadallah, White, Burger, and Wang]{wu2023autogen}
+Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, Beibin Li, Erkang Zhu,
+  Li~Jiang, Xiaoyun Zhang, Shaokun Zhang, Jiale Liu, Ahmed~Hassan Awadallah,
+  Ryen~W. White, Doug Burger, and Chi Wang.
+\newblock {AutoGen}: Enabling next-gen {LLM} applications via multi-agent
+  conversation.
+\newblock arXiv preprint arXiv:2308.08155, 2023.
+\newblock URL \url{https://arxiv.org/abs/2308.08155}.
+
+\bibitem[Xia et~al.(2024)Xia, Deng, Dunn, and Zhang]{xia2024agentless}
+Chunqiu~Steven Xia, Yinlin Deng, Soren Dunn, and Lingming Zhang.
+\newblock Agentless: Demystifying {LLM}-based software engineering agents.
+\newblock arXiv preprint arXiv:2407.01489, 2024.
+\newblock URL \url{https://arxiv.org/abs/2407.01489}.
+
+\bibitem[Yang et~al.(2024)Yang, Jimenez, Wettig, Lieret, Yao, Narasimhan, and
+  Press]{yang2024sweagent}
+John Yang, Carlos~E. Jimenez, Alexander Wettig, Kilian Lieret, Shunyu Yao,
+  Karthik Narasimhan, and Ofir Press.
+\newblock {SWE-agent}: Agent-computer interfaces enable automated software
+  engineering.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~37, pages 50528--50652, 2024.
+\newblock \doi{10.52202/079017-1601}.
+
+\bibitem[Zhang et~al.(2024)Zhang, Ruan, Fan, and
+  Roychoudhury]{zhang2024autocoderover}
+Yuntong Zhang, Haifeng Ruan, Zhiyu Fan, and Abhik Roychoudhury.
+\newblock {AutoCodeRover}: Autonomous program improvement.
+\newblock In \emph{Proceedings of the 33rd {ACM} {SIGSOFT} International
+  Symposium on Software Testing and Analysis ({ISSTA} '24)}, pages 1592--1604.
+  ACM, 2024.
+\newblock \doi{10.1145/3650212.3680384}.
+
+\bibitem[Zimmermann et~al.(2005)Zimmermann, Wei{\ss}gerber, Diehl, and
+  Zeller]{zimmermann2005mining}
+Thomas Zimmermann, Peter Wei{\ss}gerber, Stephan Diehl, and Andreas Zeller.
+\newblock Mining version histories to guide software changes.
+\newblock \emph{IEEE Transactions on Software Engineering}, 31\penalty0
+  (6):\penalty0 429--445, June 2005.
+\newblock \doi{10.1109/TSE.2005.72}.
+
+\end{thebibliography}
