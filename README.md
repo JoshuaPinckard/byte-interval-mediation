@@ -20,7 +20,7 @@ Implemented and green in its own tests. Here, standalone: 68 of 68 tests and 6 o
 
 It does not solve semantic conflicts. Two byte-disjoint edits can still break an invariant that spans both regions; probe P4 shows it.
 
-In the ToolsEnabled 1.0.44 runtime it was effectively dormant. The mediated `repo.*` tools pointed at the installed payload, and agents edited through host file tools that were not mediated. Mediation of those host tools (`host.read_file`, `host.write_file` and a new `host.patch_file`) is being implemented now; its preliminary measurements are in `data/host-mediation-preliminary/`.
+In the ToolsEnabled 1.0.44 runtime it was effectively dormant. The mediated `repo.*` tools pointed at the installed payload, and agents edited through host file tools that were not mediated. Mediation of those host tools (`host.read_file`, `host.write_file` and a new `host.patch_file`) is now implemented on an engine branch and awaiting deployment. Its test logs and measurements are in `data/host-mediation-branch/`.
 
 ## Relation to Blast-Radius
 

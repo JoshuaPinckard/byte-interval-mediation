@@ -15,3 +15,5 @@ engine,engine c34cab8c,2026-09-10,data/engine-runs/2026-09-10-c34cab8c/remote-by
 engine,engine c34cab8c,2026-09-10,data/engine-runs/2026-09-10-c34cab8c/repo-byte-transport.txt,27,27,0,0
 engine,engine snapshot,2026-09-07,data/engine-runs/2026-09-07/byte-authority-four-suites.tap,58,58,0,0
 engine,engine snapshot,2026-09-07,data/engine-runs/2026-09-07/design-probes.tap,7,7,0,0
+host-branch,engine 3c40a8d4 (GREEN),2026-09-11,data/host-mediation-branch/host-byte-mediation.GREEN-at-3c40a8d4.log,11,11,0,0
+host-branch,engine 9922e98b (RED),2026-09-11,data/host-mediation-branch/host-byte-mediation.RED-at-9922e98b.log,11,0,11,0

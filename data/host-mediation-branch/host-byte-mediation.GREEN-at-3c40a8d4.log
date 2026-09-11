@@ -1,0 +1,77 @@
+light gate: slot 1, SEN2=65050 ok at 2026-09-11T07:30:56Z
+TAP version 13
+# Subtest: 1. two scopes read, B writes, A's stale whole-file write refuses instead of clobbering B
+ok 1 - 1. two scopes read, B writes, A's stale whole-file write refuses instead of clobbering B
+  ---
+  duration_ms: 1422.989546
+  type: 'test'
+  ...
+# Subtest: 1b. a scope that never read an existing file cannot replace it; its own write leaves it current
+ok 2 - 1b. a scope that never read an existing file cannot replace it; its own write leaves it current
+  ---
+  duration_ms: 1342.50165
+  type: 'test'
+  ...
+# Subtest: 2. an external fs.writeFileSync after A's read makes A's write and patch refuse
+ok 3 - 2. an external fs.writeFileSync after A's read makes A's write and patch refuse
+  ---
+  duration_ms: 1004.736662
+  type: 'test'
+  ...
+# Subtest: 3. creation race: exactly one of many concurrent creators wins, the rest refuse
+ok 4 - 3. creation race: exactly one of many concurrent creators wins, the rest refuse
+  ---
+  duration_ms: 408.680859
+  type: 'test'
+  ...
+# Subtest: 3b. an unmediated creator inside the publication window wins; the mediated create aborts, never freezes
+ok 5 - 3b. an unmediated creator inside the publication window wins; the mediated create aborts, never freezes
+  ---
+  duration_ms: 164.027976
+  type: 'test'
+  ...
+# Subtest: 4. byte-disjoint patches from A and B both land rebased; an overlapping stale patch refuses
+ok 6 - 4. byte-disjoint patches from A and B both land rebased; an overlapping stale patch refuses
+  ---
+  duration_ms: 1754.832314
+  type: 'test'
+  ...
+# Subtest: 5. kill switch off restores the exact legacy pair and host.patch_file refuses
+ok 7 - 5. kill switch off restores the exact legacy pair and host.patch_file refuses
+  ---
+  duration_ms: 912.338731
+  type: 'test'
+  ...
+# Subtest: 6. every existing refusal still holds on the mediated path; audit admission precedes any byte
+ok 8 - 6. every existing refusal still holds on the mediated path; audit admission precedes any byte
+  ---
+  duration_ms: 1559.63403
+  type: 'test'
+  ...
+# Subtest: 7. retention: committed payloads are pruned and the store stays bounded
+ok 9 - 7. retention: committed payloads are pruned and the store stays bounded
+  ---
+  duration_ms: 7895.353263
+  type: 'test'
+  ...
+# Subtest: 8. a crash between PREPARED and COMMITTED recovers through the authority hooks
+ok 10 - 8. a crash between PREPARED and COMMITTED recovers through the authority hooks
+  ---
+  duration_ms: 140.195918
+  type: 'test'
+  ...
+# Subtest: 9. the scope binding comes from the MCP call context, end to end through mcp.dispatch
+ok 11 - 9. the scope binding comes from the MCP call context, end to end through mcp.dispatch
+  ---
+  duration_ms: 678.392141
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 11
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17287.522471

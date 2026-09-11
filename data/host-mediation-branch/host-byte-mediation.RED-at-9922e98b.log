@@ -1,0 +1,224 @@
+light gate: slot 2, SEN2=67050 ok at 2026-09-11T07:15:10Z
+TAP version 13
+# Subtest: 1. two scopes read, B writes, A's stale whole-file write refuses instead of clobbering B
+not ok 1 - 1. two scopes read, B writes, A's stale whole-file write refuses instead of clobbering B
+  ---
+  duration_ms: 738.992614
+  type: 'test'
+  location: '<workspace>/base/tests/host-byte-mediation.test.js:63:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected rejection.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: [Function (anonymous)]
+  operator: 'rejects'
+  stack: |-
+    async TestContext.<anonymous> (<workspace>/base/tests/host-byte-mediation.test.js:72:3)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: 1b. a scope that never read an existing file cannot replace it; its own write leaves it current
+not ok 2 - 1b. a scope that never read an existing file cannot replace it; its own write leaves it current
+  ---
+  duration_ms: 140.978841
+  type: 'test'
+  location: '<workspace>/base/tests/host-byte-mediation.test.js:87:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected rejection.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: [Function (anonymous)]
+  operator: 'rejects'
+  stack: |-
+    async TestContext.<anonymous> (<workspace>/base/tests/host-byte-mediation.test.js:90:3)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: 2. an external fs.writeFileSync after A's read makes A's write and patch refuse
+not ok 3 - 2. an external fs.writeFileSync after A's read makes A's write and patch refuse
+  ---
+  duration_ms: 227.758019
+  type: 'test'
+  location: '<workspace>/base/tests/host-byte-mediation.test.js:104:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected rejection.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: [Function (anonymous)]
+  operator: 'rejects'
+  stack: |-
+    async TestContext.<anonymous> (<workspace>/base/tests/host-byte-mediation.test.js:109:3)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: 3. creation race: exactly one of many concurrent creators wins, the rest refuse
+not ok 4 - 3. creation race: exactly one of many concurrent creators wins, the rest refuse
+  ---
+  duration_ms: 183.934042
+  type: 'test'
+  location: '<workspace>/base/tests/host-byte-mediation.test.js:125:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    []
+    
+    6 !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  actual: 6
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (<workspace>/base/tests/host-byte-mediation.test.js:132:10)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: 3b. an unmediated creator inside the publication window wins; the mediated create aborts, never freezes
+not ok 5 - 3b. an unmediated creator inside the publication window wins; the mediated create aborts, never freezes
+  ---
+  duration_ms: 1.594704
+  type: 'test'
+  location: '<workspace>/base/tests/host-byte-mediation.test.js:140:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'materialize')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (<workspace>/base/tests/host-byte-mediation.test.js:150:23)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: 4. byte-disjoint patches from A and B both land rebased; an overlapping stale patch refuses
+not ok 6 - 4. byte-disjoint patches from A and B both land rebased; an overlapping stale patch refuses
+  ---
+  duration_ms: 1.852246
+  type: 'test'
+  location: '<workspace>/base/tests/host-byte-mediation.test.js:175:1'
+  failureType: 'testCodeFailure'
+  error: 'Invalid input: startByte: additional property is not allowed; endByte: additional property is not allowed'
+  code: 'INVALID_PARAMS'
+  name: 'SchemaValidationError'
+  stack: |-
+    assertValid (<workspace>/base/src/lib/schema-validator.js:220:28)
+    executeTool (<workspace>/base/src/lib/tool-registry.js:4099:3)
+    Object.call (<workspace>/base/tests/host-byte-mediation.test.js:48:34)
+    TestContext.<anonymous> (<workspace>/base/tests/host-byte-mediation.test.js:184:11)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: 5. kill switch off restores the exact legacy pair and host.patch_file refuses
+not ok 7 - 5. kill switch off restores the exact legacy pair and host.patch_file refuses
+  ---
+  duration_ms: 0.627649
+  type: 'test'
+  location: '<workspace>/base/tests/host-byte-mediation.test.js:217:1'
+  failureType: 'testCodeFailure'
+  error: 'host.hostByteMediationEnabled is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    <workspace>/base/tests/host-byte-mediation.test.js:222:23
+    withEnv (<workspace>/base/tests/host-byte-mediation.test.js:57:18)
+    TestContext.<anonymous> (<workspace>/base/tests/host-byte-mediation.test.js:221:9)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: 6. every existing refusal still holds on the mediated path; audit admission precedes any byte
+not ok 8 - 6. every existing refusal still holds on the mediated path; audit admission precedes any byte
+  ---
+  duration_ms: 582.481545
+  type: 'test'
+  location: '<workspace>/base/tests/host-byte-mediation.test.js:251:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    UNKNOWN_TOOL: Unknown ToolsEnabled tool: host.patch_file
+    + actual - expected
+    
+    + 'UNKNOWN_TOOL'
+    - 'HOST_PATH_FORBIDDEN'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'HOST_PATH_FORBIDDEN'
+  actual: 'UNKNOWN_TOOL'
+  operator: 'strictEqual'
+  stack: |-
+    Object.<anonymous> (<workspace>/base/tests/host-byte-mediation.test.js:61:47)
+    expectedException (node:assert:576:17)
+    expectsError (node:assert:701:21)
+    Function.rejects (node:assert:767:3)
+    async TestContext.<anonymous> (<workspace>/base/tests/host-byte-mediation.test.js:267:3)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: 7. retention: committed payloads are pruned and the store stays bounded
+not ok 9 - 7. retention: committed payloads are pruned and the store stays bounded
+  ---
+  duration_ms: 5453.630697
+  type: 'test'
+  location: '<workspace>/base/tests/host-byte-mediation.test.js:296:1'
+  failureType: 'testCodeFailure'
+  error: 'The "path" argument must be of type string. Received undefined'
+  code: 'ERR_INVALID_ARG_TYPE'
+  name: 'TypeError'
+  stack: |-
+    Object.join (node:path:1306:7)
+    TestContext.<anonymous> (<workspace>/base/tests/host-byte-mediation.test.js:304:22)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: 8. a crash between PREPARED and COMMITTED recovers through the authority hooks
+not ok 10 - 8. a crash between PREPARED and COMMITTED recovers through the authority hooks
+  ---
+  duration_ms: 0.805451
+  type: 'test'
+  location: '<workspace>/base/tests/host-byte-mediation.test.js:326:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'materialize')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (<workspace>/base/tests/host-byte-mediation.test.js:334:23)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: 9. the scope binding comes from the MCP call context, end to end through mcp.dispatch
+not ok 11 - 9. the scope binding comes from the MCP call context, end to end through mcp.dispatch
+  ---
+  duration_ms: 92.424759
+  type: 'test'
+  location: '<workspace>/base/tests/host-byte-mediation.test.js:375:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'binding')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (<workspace>/base/tests/host-byte-mediation.test.js:384:36)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 0
+# fail 11
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7429.881551
